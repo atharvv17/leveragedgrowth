@@ -108,8 +108,8 @@ const LogoCarousel: React.FC = () => {
                   <img 
                     src={logo.imagePath} 
                     alt={`${logo.name} logo`}
-                    className="h-14 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300 filter brightness-110"
-                    style={{ maxWidth: '140px' }}
+                    className="h-20 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300 filter brightness-110"
+                    style={{ maxWidth: '180px' }}
                   />
                 </div>
               ))}
