@@ -103,12 +103,13 @@ const LogoCarousel: React.FC = () => {
               {allLogos.map((logo, index) => (
                 <div 
                   key={`${logo.id}-${index}`} 
-                  className="flex-shrink-0 h-14 md:h-18 lg:h-20 flex items-center justify-center bg-transparent px-4"
+                  className="flex-shrink-0 flex items-center justify-center bg-transparent px-4"
                 >
                   <img 
                     src={logo.imagePath} 
                     alt={`${logo.name} logo`}
-                    className="max-h-full w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300 filter brightness-110"
+                    className="h-14 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300 filter brightness-110"
+                    style={{ maxWidth: '140px' }}
                   />
                 </div>
               ))}
