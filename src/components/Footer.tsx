@@ -10,11 +10,7 @@ const Footer: React.FC = () => {
         <div className="grid md:grid-cols-3 gap-10 mb-10">
           <div>
             <a href="#" className="inline-block mb-4">
-              <img 
-                src="/lovable-uploads/fc3428f1-ae4a-470d-8c0b-b8294ec32f0c.png" 
-                alt="LeveragedGrowth.co" 
-                className="h-10"
-              />
+              <span className="text-2xl font-bold gradient-text">LeveragedGrowth</span>
             </a>
             <p className="text-leveraged-white/70 max-w-xs">
               Helping businesses scale with predictable sales systems and elite closers.

@@ -36,9 +36,9 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <a href="#" className="hover:opacity-90 transition-opacity">
           <img 
-            src="/lovable-uploads/fc3428f1-ae4a-470d-8c0b-b8294ec32f0c.png" 
+            src="/lovable-uploads/08c3eb96-6c27-4ca5-97af-44bdaa022844.png" 
             alt="LeveragedGrowth.co" 
-            className="h-10 md:h-12"
+            className="h-12 md:h-16 filter drop-shadow-[0_0_10px_rgba(0,163,255,0.5)]"
           />
         </a>
         
@@ -79,9 +79,9 @@ const Navbar: React.FC = () => {
       )}>
         <div className="flex justify-center mb-8">
           <img 
-            src="/lovable-uploads/fc3428f1-ae4a-470d-8c0b-b8294ec32f0c.png" 
+            src="/lovable-uploads/08c3eb96-6c27-4ca5-97af-44bdaa022844.png" 
             alt="LeveragedGrowth.co" 
-            className="h-10"
+            className="h-14 filter drop-shadow-[0_0_10px_rgba(0,163,255,0.5)]"
           />
         </div>
         <nav className="flex flex-col space-y-6">

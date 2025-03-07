@@ -7,13 +7,9 @@ const Hero: React.FC = () => {
     <section id="hero" className="pt-32 pb-20 px-6 md:px-12 lg:px-24 relative">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col items-center text-center mb-14 animate-fade-in">
-          <div className="mb-6">
-            <img 
-              src="/lovable-uploads/fc3428f1-ae4a-470d-8c0b-b8294ec32f0c.png" 
-              alt="LeveragedGrowth.co" 
-              className="h-16 md:h-20 mb-6 animate-fade-in-fast"
-            />
-          </div>
+          <p className="text-lg md:text-xl text-leveraged-blue font-medium mb-4 animate-fade-in-fast">
+            The Sales Agency for High-Performance Businesses
+          </p>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight gradient-text animate-fade-in" style={{ animationDelay: '200ms' }}>
             Done-for-You Sales & Lead Gen <br className="hidden md:block" />
