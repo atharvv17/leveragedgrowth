@@ -1,3 +1,4 @@
+
 import React from 'react';
 import CaseStudyCard from './ui/CaseStudyCard';
 import { ArrowRight } from 'lucide-react';
@@ -5,20 +6,20 @@ import { ArrowRight } from 'lucide-react';
 const CaseStudies: React.FC = () => {
   const caseStudies = [
     {
-      clientName: "Tech Agency X",
-      result: "Generated $50K in 60 days",
-      description: "Implemented an outbound LinkedIn strategy that brought 15 qualified leads and 5 new clients in the first two months.",
+      clientName: "From Struggling Sales to $40K/Month – Kieran's Success Story",
+      result: "",
+      description: "Kieran scaled his agency to $40K/month by implementing a proven outbound and inbound sales system and hiring top-tier closers, turning inconsistent sales into a predictable, high-converting revenue machine.",
       imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       videoUrl: "https://www.youtube.com/watch?v=I8n9f9D157c",
-      isYoutubeVideo: true,
-      additionalText: "From Struggling Sales to $40K/Month – Kieran's Success Story\nKieran scaled his agency to $40K/month by implementing a proven outbound and inbound sales system and hiring top-tier closers, turning inconsistent sales into a predictable, high-converting revenue machine."
+      isYoutubeVideo: true
     },
     {
       clientName: "SaaS Platform Y",
       result: "Increased conversion rate by 35%",
       description: "Placed a trained sales closer who transformed their sales process and dramatically improved their demo-to-close ratio.",
       imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-businessperson-at-a-business-meeting-in-a-modern-office-42333-large.mp4"
+      videoUrl: "https://www.youtube.com/watch?v=SfD6BD-NaO0",
+      isYoutubeVideo: true
     },
     {
       clientName: "Coaching Business Z",

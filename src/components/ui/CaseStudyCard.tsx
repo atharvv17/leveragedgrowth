@@ -61,7 +61,7 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({
       style={{ animationDelay: `${delay}ms` }}
     >
       {(imageUrl || videoUrl) && (
-        <div className="aspect-[16/9] w-full relative overflow-hidden cursor-pointer" onClick={isYoutubeVideo ? undefined : handleVideoClick}>
+        <div className="aspect-[16/9] w-full md:w-3/4 mx-auto relative overflow-hidden cursor-pointer" onClick={isYoutubeVideo ? undefined : handleVideoClick}>
           {isYoutubeVideo && youtubeId ? (
             <iframe 
               src={`https://www.youtube.com/embed/${youtubeId}?rel=0`}
