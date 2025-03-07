@@ -1,4 +1,3 @@
-
 import React from 'react';
 import CaseStudyCard from './ui/CaseStudyCard';
 import { ArrowRight } from 'lucide-react';
@@ -11,7 +10,8 @@ const CaseStudies: React.FC = () => {
       description: "Implemented an outbound LinkedIn strategy that brought 15 qualified leads and 5 new clients in the first two months.",
       imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       videoUrl: "https://www.youtube.com/watch?v=I8n9f9D157c",
-      isYoutubeVideo: true
+      isYoutubeVideo: true,
+      additionalText: "From Struggling Sales to $40K/Month – Kieran's Success Story\nKieran scaled his agency to $40K/month by implementing a proven outbound and inbound sales system and hiring top-tier closers, turning inconsistent sales into a predictable, high-converting revenue machine."
     },
     {
       clientName: "SaaS Platform Y",
@@ -54,6 +54,7 @@ const CaseStudies: React.FC = () => {
               imageUrl={caseStudy.imageUrl}
               videoUrl={caseStudy.videoUrl}
               isYoutubeVideo={caseStudy.isYoutubeVideo}
+              additionalText={caseStudy.additionalText}
               delay={index * 200}
             />
           ))}

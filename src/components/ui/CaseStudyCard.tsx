@@ -10,6 +10,7 @@ interface CaseStudyCardProps {
   imageUrl?: string;
   videoUrl?: string;
   isYoutubeVideo?: boolean;
+  additionalText?: string;
   className?: string;
   delay?: number;
 }
@@ -21,6 +22,7 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({
   imageUrl,
   videoUrl,
   isYoutubeVideo = false,
+  additionalText,
   className,
   delay = 0
 }) => {
@@ -119,6 +121,12 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({
         <h3 className="text-xl md:text-2xl font-bold mb-2 text-white">{clientName}</h3>
         <p className="text-leveraged-blue font-semibold mb-4">{result}</p>
         <p className="text-leveraged-white/90">{description}</p>
+        
+        {additionalText && (
+          <div className="mt-6 border-t border-white/10 pt-4">
+            <div className="text-leveraged-white/90 whitespace-pre-line">{additionalText}</div>
+          </div>
+        )}
       </div>
     </div>
   );
