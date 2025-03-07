@@ -31,7 +31,7 @@ const Services: React.FC = () => {
   ];
 
   return (
-    <section id="services" className="py-20 px-6 md:px-12 lg:px-24 relative">
+    <section id="services" className="py-10 px-6 md:px-12 lg:px-24 relative">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <p className="inline-block text-sm font-semibold py-1 px-3 rounded-full bg-leveraged-blue/10 text-leveraged-blue mb-4">
