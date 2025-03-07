@@ -1,7 +1,7 @@
 
 import React from 'react';
 import CaseStudyCard from './ui/CaseStudyCard';
-import { ArrowRight, Play } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const CaseStudies: React.FC = () => {
   const caseStudies = [
@@ -10,21 +10,24 @@ const CaseStudies: React.FC = () => {
       result: "Generated $50K in 60 days",
       description: "Implemented an outbound LinkedIn strategy that brought 15 qualified leads and 5 new clients in the first two months.",
       imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      videoUrl: "#" // Placeholder for actual video URL
+      // Sample video URL - you should replace this with an actual video URL
+      videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-businessman-working-at-his-desk-with-a-laptop-in-new-york-41917-large.mp4" 
     },
     {
       clientName: "SaaS Platform Y",
       result: "Increased conversion rate by 35%",
       description: "Placed a trained sales closer who transformed their sales process and dramatically improved their demo-to-close ratio.",
       imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      videoUrl: "#" // Placeholder for actual video URL
+      // Sample video URL - you should replace this with an actual video URL
+      videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-businessperson-at-a-business-meeting-in-a-modern-office-42333-large.mp4"
     },
     {
       clientName: "Coaching Business Z",
       result: "Scaled to $30K monthly recurring",
       description: "Built a complete sales system from scratch, including lead generation, appointment setting, and closing sequences.",
       imageUrl: "https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      videoUrl: "#" // Placeholder for actual video URL
+      // Sample video URL - you should replace this with an actual video URL
+      videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-man-under-multicolored-lights-32502-large.mp4"
     }
   ];
 
