@@ -49,17 +49,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         <p className="text-leveraged-white">{forWho}</p>
       </div>
       
-      {pricing && (
-        <div className="mb-6">
-          <h4 className="text-leveraged-blue font-semibold mb-2">Pricing:</h4>
-          <ul>
-            {pricing.map((price, index) => (
-              <li key={index} className="text-leveraged-white">{price}</li>
-            ))}
-          </ul>
-        </div>
-      )}
-      
       <a 
         href={ctaLink}
         className="inline-flex items-center justify-center w-full px-5 py-3 rounded-lg bg-leveraged-blue text-white font-medium hover:shadow-[0_0_15px_rgba(0,163,255,0.5)] transition-all animate-pulse-glow"

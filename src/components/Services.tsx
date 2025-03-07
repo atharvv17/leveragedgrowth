@@ -13,23 +13,19 @@ const Services: React.FC = () => {
         "Trained setters/closers to handle leads."
       ],
       forWho: "Founders, coaches, agencies, and SaaS companies that want a predictable sales pipeline.",
-      pricing: [
-        "$2,500–$10,000 one-time",
-        "OR Monthly Retainer: $1,500+/mo"
-      ],
       ctaText: "Book a Strategy Call",
       ctaLink: "#contact"
     },
     {
-      title: "CloserElite™",
+      title: "SalesElite™",
       description: [
-        "Recruit, train & place high-ticket closers in your business.",
-        "Closers get customized training for your offer & industry.",
-        "Performance tracking, sales script coaching, and ongoing improvements.",
-        "If a closer underperforms, we replace them for free."
+        "Recruit, train & place top-tier sales professionals (Closers, Setters, Media Buyers, and more) to scale your revenue.",
+        "Customized training tailored to your offer, industry, and sales process.",
+        "Performance tracking, sales script coaching, and ongoing optimization to ensure maximum conversions.",
+        "Guaranteed replacement – If any hire underperforms, we replace them for free."
       ],
-      forWho: "Businesses that already have leads but need a closer to convert them into revenue.",
-      ctaText: "Find a Sales Closer",
+      forWho: "Businesses that already have leads but need a high-performance sales team to convert them into revenue.",
+      ctaText: "Find a Sales Expert",
       ctaLink: "#contact"
     }
   ];
@@ -56,7 +52,6 @@ const Services: React.FC = () => {
               title={service.title}
               description={service.description}
               forWho={service.forWho}
-              pricing={service.pricing}
               ctaText={service.ctaText}
               ctaLink={service.ctaLink}
               delay={index * 200}
