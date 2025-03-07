@@ -1,5 +1,5 @@
 
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { Play, Pause } from 'lucide-react';
 
@@ -9,6 +9,7 @@ interface CaseStudyCardProps {
   description: string;
   imageUrl?: string;
   videoUrl?: string;
+  isYoutubeVideo?: boolean;
   className?: string;
   delay?: number;
 }
@@ -19,14 +20,26 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({
   description,
   imageUrl,
   videoUrl,
+  isYoutubeVideo = false,
   className,
   delay = 0
 }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [youtubeId, setYoutubeId] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (isYoutubeVideo && videoUrl) {
+      // Extract YouTube video ID from URL
+      const match = videoUrl.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([^&?]+)/);
+      if (match && match[1]) {
+        setYoutubeId(match[1]);
+      }
+    }
+  }, [isYoutubeVideo, videoUrl]);
 
   const handleVideoClick = () => {
-    if (!videoUrl) return;
+    if (!videoUrl || isYoutubeVideo) return;
     
     if (isPlaying) {
       videoRef.current?.pause();
@@ -40,14 +53,22 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({
   return (
     <div 
       className={cn(
-        "glass-card rounded-xl overflow-hidden transform hover:scale-[1.01] transition-all duration-300 border border-white/10 hover:border-leveraged-blue/30 group animate-fade-in",
+        "glass-card rounded-xl overflow-hidden transform hover:scale-[1.01] transition-all duration-300 border border-white/10 hover:border-leveraged-blue/30 group animate-fade-in w-full",
         className
       )}
       style={{ animationDelay: `${delay}ms` }}
     >
       {(imageUrl || videoUrl) && (
-        <div className="aspect-[16/9] w-full relative overflow-hidden cursor-pointer" onClick={handleVideoClick}>
-          {videoUrl ? (
+        <div className="aspect-[16/9] w-full relative overflow-hidden cursor-pointer" onClick={isYoutubeVideo ? undefined : handleVideoClick}>
+          {isYoutubeVideo && youtubeId ? (
+            <iframe 
+              src={`https://www.youtube.com/embed/${youtubeId}?rel=0`}
+              className="w-full h-full object-cover"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          ) : videoUrl ? (
             <>
               <video 
                 ref={videoRef}

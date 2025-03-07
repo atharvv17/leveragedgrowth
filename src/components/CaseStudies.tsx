@@ -10,15 +10,14 @@ const CaseStudies: React.FC = () => {
       result: "Generated $50K in 60 days",
       description: "Implemented an outbound LinkedIn strategy that brought 15 qualified leads and 5 new clients in the first two months.",
       imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      // Sample video URL - you should replace this with an actual video URL
-      videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-businessman-working-at-his-desk-with-a-laptop-in-new-york-41917-large.mp4" 
+      videoUrl: "https://www.youtube.com/watch?v=I8n9f9D157c",
+      isYoutubeVideo: true
     },
     {
       clientName: "SaaS Platform Y",
       result: "Increased conversion rate by 35%",
       description: "Placed a trained sales closer who transformed their sales process and dramatically improved their demo-to-close ratio.",
       imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      // Sample video URL - you should replace this with an actual video URL
       videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-businessperson-at-a-business-meeting-in-a-modern-office-42333-large.mp4"
     },
     {
@@ -26,7 +25,6 @@ const CaseStudies: React.FC = () => {
       result: "Scaled to $30K monthly recurring",
       description: "Built a complete sales system from scratch, including lead generation, appointment setting, and closing sequences.",
       imageUrl: "https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      // Sample video URL - you should replace this with an actual video URL
       videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-man-under-multicolored-lights-32502-large.mp4"
     }
   ];
@@ -46,7 +44,7 @@ const CaseStudies: React.FC = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex flex-col gap-8 max-w-4xl mx-auto">
           {caseStudies.map((caseStudy, index) => (
             <CaseStudyCard
               key={index}
@@ -55,6 +53,7 @@ const CaseStudies: React.FC = () => {
               description={caseStudy.description}
               imageUrl={caseStudy.imageUrl}
               videoUrl={caseStudy.videoUrl}
+              isYoutubeVideo={caseStudy.isYoutubeVideo}
               delay={index * 200}
             />
           ))}
