@@ -31,8 +31,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white">Contact</h3>
             <ul className="space-y-2">
-              <li className="text-leveraged-white/70">+1 (555) 123-4567</li>
-              <li className="text-leveraged-white/70">hello@leveragedgrowth.co</li>
+              <li className="text-leveraged-white/70">leveragegrowthbiz@gmail.com</li>
             </ul>
           </div>
         </div>
