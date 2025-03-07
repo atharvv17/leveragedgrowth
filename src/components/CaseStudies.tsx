@@ -1,3 +1,4 @@
+
 import React from 'react';
 import CaseStudyCard from './ui/CaseStudyCard';
 import { ArrowRight } from 'lucide-react';
@@ -21,9 +22,9 @@ const CaseStudies: React.FC = () => {
       isYoutubeVideo: true
     },
     {
-      clientName: "Coaching Business Z",
-      result: "Scaled to $30K monthly recurring",
-      description: "Built a complete sales system from scratch, including lead generation, appointment setting, and closing sequences.",
+      clientName: "How Belteki Hit $10K in His First Month with LeveragedGrowth",
+      result: "",
+      description: "Belteki, a B2B consultant, struggled with setting up a predictable sales system and closing high-ticket clients. LeveragedGrowth helped him implement an automated outbound and inbound lead generation strategy, optimize his sales process, and recruit elite closers to handle calls. In just one month, he hit $10K in revenue, setting the foundation for long-term scalability.",
       imageUrl: "https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       videoUrl: "https://www.youtube.com/watch?v=9t_SkFg-4As",
       isYoutubeVideo: true
