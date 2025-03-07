@@ -1,4 +1,3 @@
-
 import React from 'react';
 import CaseStudyCard from './ui/CaseStudyCard';
 import { ArrowRight } from 'lucide-react';
@@ -26,7 +25,8 @@ const CaseStudies: React.FC = () => {
       result: "Scaled to $30K monthly recurring",
       description: "Built a complete sales system from scratch, including lead generation, appointment setting, and closing sequences.",
       imageUrl: "https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-man-under-multicolored-lights-32502-large.mp4"
+      videoUrl: "https://www.youtube.com/watch?v=9t_SkFg-4As",
+      isYoutubeVideo: true
     }
   ];
 
