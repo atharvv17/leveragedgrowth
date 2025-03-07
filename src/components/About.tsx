@@ -9,6 +9,21 @@ const About: React.FC = () => {
     "Hands-free setup & training, so you don't waste time."
   ];
 
+  const founders = [
+    {
+      name: "Sikander",
+      title: "The Service Delivery Maestro",
+      image: "/lovable-uploads/b2f07395-cb44-489f-9e44-8b70fe3a5766.png",
+      bio: "With extensive experience working with international clients, Sikander has mastered the art of lead generation and sales optimization. His expertise lies in delivering exceptional results, ensuring every client gets a highly effective, done-for-you sales system that drives consistent revenue growth. His ability to streamline operations and maximize conversions makes him a powerhouse in service delivery and client success."
+    },
+    {
+      name: "Atharv",
+      title: "The B2B Growth Architect",
+      image: "/lovable-uploads/b8ba4229-5a8c-484d-986c-cc68d861168f.png", 
+      bio: "A B2B growth expert, Atharv has helped multiple companies build high-performing acquisition processes that fuel predictable, scalable growth. He has successfully scaled agencies, coaching businesses, and consulting firms, refining their sales strategies and closing systems to maximize revenue. His expertise in B2B sales, lead generation, and automation makes him a key driver behind LeveragedGrowth's success."
+    }
+  ];
+
   return (
     <section id="about" className="py-20 px-6 md:px-12 lg:px-24 relative">
       <div className="max-w-7xl mx-auto">
@@ -72,6 +87,47 @@ const About: React.FC = () => {
             
             <div className="absolute -bottom-4 -right-4 h-28 w-28 bg-leveraged-blue/20 blur-3xl rounded-full"></div>
             <div className="absolute -top-4 -left-4 h-20 w-40 bg-leveraged-blue/10 blur-3xl rounded-full"></div>
+          </div>
+        </div>
+
+        {/* Meet the Founders Section */}
+        <div className="mt-24 animate-fade-in">
+          <div className="text-center mb-12">
+            <p className="inline-block text-sm font-semibold py-1 px-3 rounded-full bg-leveraged-blue/10 text-leveraged-blue mb-4">
+              THE TEAM
+            </p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 gradient-text">
+              Meet the Founders
+            </h2>
+            <p className="text-leveraged-white/90 max-w-2xl mx-auto">
+              Together, Sikander & Atharv have built LeveragedGrowth to help businesses achieve seamless sales automation, top-tier client acquisition, and predictable revenue growth.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-10">
+            {founders.map((founder, index) => (
+              <div 
+                key={index} 
+                className="glass-card border border-white/10 rounded-xl overflow-hidden hover:border-leveraged-blue/30 transition-all group"
+                style={{ animationDelay: `${index * 200}ms` }}
+              >
+                <div className="relative h-96 overflow-hidden">
+                  <img 
+                    src={founder.image} 
+                    alt={`${founder.name} - ${founder.title}`} 
+                    className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                  <div className="absolute bottom-0 left-0 p-6">
+                    <h3 className="text-2xl font-bold text-white">{founder.name}</h3>
+                    <p className="text-leveraged-blue font-medium">{founder.title}</p>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <p className="text-leveraged-white/90">{founder.bio}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
