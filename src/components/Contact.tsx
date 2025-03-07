@@ -31,7 +31,7 @@ const Contact: React.FC = () => {
           </p>
         </div>
         
-        <div className="flex flex-col gap-12">
+        <div className="flex flex-col gap-4">
           <div className="animate-fade-in" style={{ animationDelay: '200ms' }}>
             <div className="glass-card rounded-xl p-8 border border-white/10 hover:border-leveraged-blue/30 transition-all">
               <div className="calendly-inline-widget" data-url="https://calendly.com/leveragegrowthbiz/30min" style={{ minWidth: "100%", height: "700px" }}></div>
