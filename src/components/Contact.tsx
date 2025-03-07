@@ -16,29 +16,9 @@ const Contact: React.FC = () => {
           <p className="text-2xl font-medium text-leveraged-white mb-8">
             Schedule a Free Strategy Call Today
           </p>
-          
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-12">
-            <a 
-              href="https://calendly.com/leveragegrowthbiz/30min" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-leveraged-blue text-white px-6 py-3 rounded-lg hover:bg-leveraged-blue/80 transition-all duration-300 font-medium text-lg"
-            >
-              <Calendar className="w-5 h-5" />
-              Book a Call
-            </a>
-            
-            <a 
-              href="mailto:leveragegrowthbiz@gmail.com" 
-              className="flex items-center gap-2 bg-transparent border border-leveraged-blue/70 text-leveraged-blue px-6 py-3 rounded-lg hover:bg-leveraged-blue/10 transition-all duration-300 font-medium text-lg"
-            >
-              <Mail className="w-5 h-5" />
-              leveragegrowthbiz@gmail.com
-            </a>
-          </div>
         </div>
         
-        <div className="glass-card rounded-xl p-8 border border-white/10 animate-fade-in">
+        <div className="glass-card rounded-xl p-8 border border-white/10 animate-fade-in mb-12">
           <h3 className="text-xl md:text-2xl font-bold mb-6 text-white">
             What Happens Next?
           </h3>
@@ -85,6 +65,28 @@ const Contact: React.FC = () => {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+        
+        <div className="text-center animate-fade-in">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+            <a 
+              href="https://calendly.com/leveragegrowthbiz/30min" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-leveraged-blue text-white px-6 py-3 rounded-lg hover:bg-leveraged-blue/80 transition-all duration-300 font-medium text-lg"
+            >
+              <Calendar className="w-5 h-5" />
+              Book a Call
+            </a>
+            
+            <a 
+              href="mailto:leveragegrowthbiz@gmail.com" 
+              className="flex items-center gap-2 bg-transparent border border-leveraged-blue/70 text-leveraged-blue px-6 py-3 rounded-lg hover:bg-leveraged-blue/10 transition-all duration-300 font-medium text-lg"
+            >
+              <Mail className="w-5 h-5" />
+              leveragegrowthbiz@gmail.com
+            </a>
           </div>
         </div>
       </div>
