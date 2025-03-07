@@ -118,23 +118,23 @@ const About: React.FC = () => {
                 
                 <div className="grid grid-cols-2 gap-4 w-full">
                   <div className="glass-card rounded-lg p-5 text-center hover:border-leveraged-blue/30 transition-colors border border-white/10">
-                    <Counter end={85} suffix="%" />
+                    <Counter end={72} suffix="%" />
                     <p className="text-sm text-leveraged-white/80">Avg. Increase in Qualified Leads</p>
                   </div>
                   
                   <div className="glass-card rounded-lg p-5 text-center hover:border-leveraged-blue/30 transition-colors border border-white/10">
-                    <Counter end={40} suffix="%" />
+                    <Counter end={38} suffix="%" />
                     <p className="text-sm text-leveraged-white/80">Avg. Boost in Conversion Rates</p>
                   </div>
                   
                   <div className="glass-card rounded-lg p-5 text-center hover:border-leveraged-blue/30 transition-colors border border-white/10">
-                    <Counter end={3} suffix="x" />
+                    <Counter end={2.8} suffix="x" />
                     <p className="text-sm text-leveraged-white/80">ROI Within First 90 Days</p>
                   </div>
                   
                   <div className="glass-card rounded-lg p-5 text-center hover:border-leveraged-blue/30 transition-colors border border-white/10">
-                    <Counter end={100} suffix="%" />
-                    <p className="text-sm text-leveraged-white/80">Client Satisfaction Rate</p>
+                    <Counter end={94} suffix="%" />
+                    <p className="text-sm text-leveraged-white/80">Client Success Rate</p>
                   </div>
                 </div>
               </div>
