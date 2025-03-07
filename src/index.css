@@ -73,6 +73,27 @@
   
   .glass-card {
     @apply bg-black/30 backdrop-blur-lg border border-white/10 shadow-lg;
+    box-shadow: 0 8px 32px rgba(0, 163, 255, 0.1), 0 4px 16px rgba(0, 163, 255, 0.05);
+  }
+  
+  .glass-card:hover {
+    box-shadow: 0 10px 40px rgba(0, 163, 255, 0.15), 0 6px 20px rgba(0, 163, 255, 0.1);
+  }
+  
+  .blue-shadow {
+    box-shadow: 0 4px 20px rgba(0, 163, 255, 0.15);
+  }
+  
+  .blue-shadow-lg {
+    box-shadow: 0 8px 30px rgba(0, 163, 255, 0.2);
+  }
+  
+  .btn-shadow {
+    box-shadow: 0 4px 12px rgba(0, 163, 255, 0.3);
+  }
+  
+  .btn-shadow:hover {
+    box-shadow: 0 6px 16px rgba(0, 163, 255, 0.5);
   }
   
   .circuit-bg {
