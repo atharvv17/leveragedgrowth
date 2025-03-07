@@ -31,10 +31,10 @@ const Contact: React.FC = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="flex flex-col gap-12">
           <div className="animate-fade-in" style={{ animationDelay: '200ms' }}>
-            <div className="glass-card rounded-xl p-8 border border-white/10 hover:border-leveraged-blue/30 transition-all h-full">
-              <div className="calendly-inline-widget" data-url="https://calendly.com/leveragegrowthbiz/30min" style={{ minWidth: "100%", height: "600px" }}></div>
+            <div className="glass-card rounded-xl p-8 border border-white/10 hover:border-leveraged-blue/30 transition-all">
+              <div className="calendly-inline-widget" data-url="https://calendly.com/leveragegrowthbiz/30min" style={{ minWidth: "100%", height: "700px" }}></div>
             </div>
           </div>
           
