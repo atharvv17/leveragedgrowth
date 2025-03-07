@@ -29,6 +29,21 @@ const LogoCarousel: React.FC = () => {
       name: "Keller Williams Delhi NCR",
       imagePath: "/lovable-uploads/94f358f3-bac6-420d-9f6b-a5c32f8a970d.png"
     },
+    {
+      id: 5,
+      name: "Instantly",
+      imagePath: "/lovable-uploads/219de8af-23c4-4a4e-be4b-58f1a7bad369.png"
+    },
+    {
+      id: 6,
+      name: "NEXA Mortgage",
+      imagePath: "/lovable-uploads/d6d240ba-59dd-4a38-80e9-af2ce431dd39.png"
+    },
+    {
+      id: 7,
+      name: "We Connect",
+      imagePath: "/lovable-uploads/83907f47-7b5e-41b6-83da-20728461efc5.png"
+    },
   ];
 
   const logoContainerRef = useRef<HTMLDivElement>(null);
@@ -39,10 +54,9 @@ const LogoCarousel: React.FC = () => {
     if (!container) return;
     
     const scrollWidth = container.scrollWidth;
-    const clientWidth = container.clientWidth;
     
     let scrollPosition = 0;
-    const speed = 1; // Pixels per frame
+    const speed = 0.7; // Pixels per frame - slightly slower for better visibility
     
     const scroll = () => {
       if (!container) return;
@@ -69,32 +83,32 @@ const LogoCarousel: React.FC = () => {
   const allLogos = [...logos, ...logos];
 
   return (
-    <section className="py-12 md:py-16 bg-gradient-to-r from-leveraged-dark to-leveraged-darkAlt overflow-hidden">
+    <section className="py-12 md:py-20 bg-gradient-to-r from-leveraged-dark to-leveraged-darkAlt overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 gradient-text">
+        <h2 className="text-2xl md:text-3xl font-bold text-center mb-12 gradient-text">
           Trusted By Industry Leaders
         </h2>
         
         <div className="relative">
           {/* Fade effect on edges */}
-          <div className="absolute left-0 top-0 bottom-0 w-12 z-10 bg-gradient-to-r from-leveraged-dark to-transparent"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-12 z-10 bg-gradient-to-l from-leveraged-dark to-transparent"></div>
+          <div className="absolute left-0 top-0 bottom-0 w-16 z-10 bg-gradient-to-r from-leveraged-dark to-transparent"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-16 z-10 bg-gradient-to-l from-leveraged-dark to-transparent"></div>
           
           {/* Logo slider */}
           <div 
             ref={logoContainerRef}
-            className="flex items-center py-6 overflow-hidden"
+            className="flex items-center py-8 overflow-hidden"
           >
-            <div className="flex space-x-16 md:space-x-24 lg:space-x-32 animate-flow-lines">
+            <div className="flex space-x-24 md:space-x-32 lg:space-x-40">
               {allLogos.map((logo, index) => (
                 <div 
                   key={`${logo.id}-${index}`} 
-                  className="flex-shrink-0 h-12 md:h-16 flex items-center justify-center bg-transparent px-4"
+                  className="flex-shrink-0 h-14 md:h-18 lg:h-20 flex items-center justify-center bg-transparent px-4"
                 >
                   <img 
                     src={logo.imagePath} 
                     alt={`${logo.name} logo`}
-                    className="max-h-full w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                    className="max-h-full w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300 filter brightness-110"
                   />
                 </div>
               ))}
