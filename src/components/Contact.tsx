@@ -48,7 +48,9 @@ const Contact: React.FC = () => {
               </div>
               
               <a 
-                href="#"
+                href="https://calendly.com/leveragegrowthbiz/30min"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 w-full px-6 py-3 rounded-lg bg-leveraged-blue text-white font-medium justify-center hover:gap-3 transition-all hover:shadow-[0_0_20px_rgba(0,163,255,0.6)] animate-pulse-glow"
               >
                 Book a Call

@@ -57,7 +57,9 @@ const Navbar: React.FC = () => {
         
         {/* CTA Button */}
         <a 
-          href="#contact" 
+          href="https://calendly.com/leveragegrowthbiz/30min" 
+          target="_blank"
+          rel="noopener noreferrer"
           className="hidden md:inline-flex items-center px-5 py-2.5 rounded-lg bg-leveraged-blue text-white font-medium text-sm hover:bg-leveraged-blue/90 transition-all hover:shadow-[0_0_15px_rgba(0,163,255,0.5)] animate-pulse-glow"
         >
           Get a Free Consultation
@@ -96,7 +98,9 @@ const Navbar: React.FC = () => {
             </a>
           ))}
           <a 
-            href="#contact" 
+            href="https://calendly.com/leveragegrowthbiz/30min"
+            target="_blank"
+            rel="noopener noreferrer" 
             className="inline-flex items-center justify-center px-5 py-3 mt-4 rounded-lg bg-leveraged-blue text-white font-medium hover:bg-leveraged-blue/90 transition-all animate-pulse-glow"
             onClick={() => setIsMenuOpen(false)}
           >
