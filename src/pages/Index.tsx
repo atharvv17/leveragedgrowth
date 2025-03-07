@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import BlurBackground from '@/components/ui/BlurBackground';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
+import LogoCarousel from '@/components/LogoCarousel';
 import Services from '@/components/Services';
 import CaseStudies from '@/components/CaseStudies';
 import About from '@/components/About';
@@ -35,6 +36,7 @@ const Index = () => {
       <BlurBackground />
       <Navbar />
       <Hero />
+      <LogoCarousel />
       <Services />
       <CaseStudies />
       <About />
