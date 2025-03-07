@@ -29,20 +29,6 @@ const Hero: React.FC = () => {
             <ArrowRight size={18} />
           </a>
         </div>
-        
-        <div className="max-w-5xl mx-auto relative animate-fade-in-slow" style={{ animationDelay: '800ms' }}>
-          <div className="aspect-[16/9] relative rounded-xl overflow-hidden glass-card border border-white/10 glow-border">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-full h-full bg-gradient-to-tr from-leveraged-darkBlue/40 to-leveraged-blue/10 circuit-bg"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                {/* Dashboard visualization text removed */}
-              </div>
-            </div>
-          </div>
-          
-          <div className="absolute -bottom-4 -right-4 h-20 w-64 bg-leveraged-blue/20 blur-3xl rounded-full"></div>
-          <div className="absolute -top-4 -left-4 h-20 w-40 bg-leveraged-blue/10 blur-3xl rounded-full"></div>
-        </div>
       </div>
     </section>
   );

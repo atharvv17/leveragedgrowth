@@ -5,7 +5,7 @@ import ServiceCard from './ui/ServiceCard';
 const Services: React.FC = () => {
   const services = [
     {
-      title: "RevenueEngine™",
+      title: "1️⃣ Full Outbound/Inbound Sales System → RevenueEngine™",
       description: [
         "Done-for-you LinkedIn, cold email, and paid ads setup.",
         "Complete sales funnel, appointment setting, and automation.",
@@ -17,7 +17,7 @@ const Services: React.FC = () => {
       ctaLink: "#contact"
     },
     {
-      title: "SalesElite™",
+      title: "2️⃣ Hiring & Placing Sales Experts (Closers, Setters, Media Buyers & More) → SalesElite™",
       description: [
         "Recruit, train & place top-tier sales professionals (Closers, Setters, Media Buyers, and more) to scale your revenue.",
         "Customized training tailored to your offer, industry, and sales process.",
