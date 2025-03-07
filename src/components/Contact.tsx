@@ -1,8 +1,21 @@
 
-import React from 'react';
-import { Phone, Mail, ArrowRight } from 'lucide-react';
+import React, { useEffect } from 'react';
+import { ArrowRight } from 'lucide-react';
 
 const Contact: React.FC = () => {
+  useEffect(() => {
+    // Load Calendly script
+    const script = document.createElement('script');
+    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      // Cleanup script on unmount
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <section id="contact" className="py-20 px-6 md:px-12 lg:px-24 relative">
       <div className="max-w-7xl mx-auto">
@@ -20,42 +33,8 @@ const Contact: React.FC = () => {
         
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in" style={{ animationDelay: '200ms' }}>
-            <div className="glass-card rounded-xl p-8 border border-white/10 hover:border-leveraged-blue/30 transition-all">
-              <h3 className="text-xl md:text-2xl font-bold mb-6 text-white">
-                Get in Touch
-              </h3>
-              
-              <div className="space-y-6 mb-8">
-                <div className="flex items-center gap-3">
-                  <div className="bg-leveraged-blue/20 p-2 rounded-full text-leveraged-blue">
-                    <Phone size={20} />
-                  </div>
-                  <div>
-                    <p className="text-sm text-leveraged-white/70">Phone</p>
-                    <p className="text-leveraged-white">+1 (555) 123-4567</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <div className="bg-leveraged-blue/20 p-2 rounded-full text-leveraged-blue">
-                    <Mail size={20} />
-                  </div>
-                  <div>
-                    <p className="text-sm text-leveraged-white/70">Email</p>
-                    <p className="text-leveraged-white">hello@leveragedgrowth.co</p>
-                  </div>
-                </div>
-              </div>
-              
-              <a 
-                href="https://calendly.com/leveragegrowthbiz/30min"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 w-full px-6 py-3 rounded-lg bg-leveraged-blue text-white font-medium justify-center hover:gap-3 transition-all hover:shadow-[0_0_20px_rgba(0,163,255,0.6)] animate-pulse-glow"
-              >
-                Book a Call
-                <ArrowRight size={18} />
-              </a>
+            <div className="glass-card rounded-xl p-8 border border-white/10 hover:border-leveraged-blue/30 transition-all h-full">
+              <div className="calendly-inline-widget" data-url="https://calendly.com/leveragegrowthbiz/30min" style={{ minWidth: "100%", height: "600px" }}></div>
             </div>
           </div>
           
