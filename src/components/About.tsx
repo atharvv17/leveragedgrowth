@@ -108,33 +108,33 @@ const About: React.FC = () => {
           </div>
           
           <div className="relative animate-fade-in" style={{ animationDelay: '200ms' }}>
-            <div className="aspect-square rounded-xl overflow-hidden glass-card border border-white/10 p-8 relative">
+            <div className="aspect-square rounded-xl overflow-hidden glass-card border border-white/10 p-4 sm:p-6 md:p-8 relative">
               <div className="absolute inset-0 bg-gradient-to-tr from-leveraged-darkBlue/40 to-leveraged-blue/10 circuit-bg"></div>
               <div className="relative z-10 flex flex-col h-full justify-center items-center">
-                <div className="text-center mb-8">
-                  <h3 className="text-xl md:text-2xl font-bold gradient-text mb-2">Our Approach</h3>
-                  <p className="text-leveraged-white/90">We don't just build systems, we deliver results</p>
+                <div className="text-center mb-4 sm:mb-6 md:mb-8">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold gradient-text mb-2">Our Approach</h3>
+                  <p className="text-leveraged-white/90 text-sm sm:text-base">We don't just build systems, we deliver results</p>
                 </div>
                 
-                <div className="grid grid-cols-2 gap-4 w-full">
-                  <div className="glass-card rounded-lg p-5 text-center hover:border-leveraged-blue/30 transition-colors border border-white/10">
+                <div className="grid grid-cols-2 gap-2 sm:gap-4 w-full">
+                  <div className="glass-card rounded-lg p-2 sm:p-3 md:p-5 text-center hover:border-leveraged-blue/30 transition-colors border border-white/10">
                     <Counter end={72} suffix="%" />
-                    <p className="text-sm text-leveraged-white/80">Avg. Increase in Qualified Leads</p>
+                    <p className="text-xs sm:text-sm text-leveraged-white/80">Avg. Increase in Qualified Leads</p>
                   </div>
                   
-                  <div className="glass-card rounded-lg p-5 text-center hover:border-leveraged-blue/30 transition-colors border border-white/10">
+                  <div className="glass-card rounded-lg p-2 sm:p-3 md:p-5 text-center hover:border-leveraged-blue/30 transition-colors border border-white/10">
                     <Counter end={38} suffix="%" />
-                    <p className="text-sm text-leveraged-white/80">Avg. Boost in Conversion Rates</p>
+                    <p className="text-xs sm:text-sm text-leveraged-white/80">Avg. Boost in Conversion Rates</p>
                   </div>
                   
-                  <div className="glass-card rounded-lg p-5 text-center hover:border-leveraged-blue/30 transition-colors border border-white/10">
+                  <div className="glass-card rounded-lg p-2 sm:p-3 md:p-5 text-center hover:border-leveraged-blue/30 transition-colors border border-white/10">
                     <Counter end={2.8} suffix="x" />
-                    <p className="text-sm text-leveraged-white/80">ROI Within First 90 Days</p>
+                    <p className="text-xs sm:text-sm text-leveraged-white/80">ROI Within First 90 Days</p>
                   </div>
                   
-                  <div className="glass-card rounded-lg p-5 text-center hover:border-leveraged-blue/30 transition-colors border border-white/10">
+                  <div className="glass-card rounded-lg p-2 sm:p-3 md:p-5 text-center hover:border-leveraged-blue/30 transition-colors border border-white/10">
                     <Counter end={94} suffix="%" />
-                    <p className="text-sm text-leveraged-white/80">Client Success Rate</p>
+                    <p className="text-xs sm:text-sm text-leveraged-white/80">Client Success Rate</p>
                   </div>
                 </div>
               </div>
