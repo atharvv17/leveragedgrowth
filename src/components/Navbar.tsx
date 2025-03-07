@@ -34,8 +34,12 @@ const Navbar: React.FC = () => {
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <a href="#" className="text-2xl font-bold text-leveraged-white hover:text-leveraged-blue transition-colors">
-          <span className="gradient-text font-black">LeveragedGrowth</span>
+        <a href="#" className="hover:opacity-90 transition-opacity">
+          <img 
+            src="/lovable-uploads/fc3428f1-ae4a-470d-8c0b-b8294ec32f0c.png" 
+            alt="LeveragedGrowth.co" 
+            className="h-10 md:h-12"
+          />
         </a>
         
         {/* Desktop Navigation */}
@@ -73,6 +77,13 @@ const Navbar: React.FC = () => {
         "fixed inset-0 bg-leveraged-darkAlt/95 backdrop-blur-lg z-40 transition-all duration-300 flex flex-col pt-24 px-6",
         isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full pointer-events-none"
       )}>
+        <div className="flex justify-center mb-8">
+          <img 
+            src="/lovable-uploads/fc3428f1-ae4a-470d-8c0b-b8294ec32f0c.png" 
+            alt="LeveragedGrowth.co" 
+            className="h-10"
+          />
+        </div>
         <nav className="flex flex-col space-y-6">
           {navLinks.map((link) => (
             <a 

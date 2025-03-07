@@ -9,8 +9,12 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-3 gap-10 mb-10">
           <div>
-            <a href="#" className="text-2xl font-bold text-leveraged-white mb-4 inline-block">
-              <span className="gradient-text font-black">LeveragedGrowth</span>
+            <a href="#" className="inline-block mb-4">
+              <img 
+                src="/lovable-uploads/fc3428f1-ae4a-470d-8c0b-b8294ec32f0c.png" 
+                alt="LeveragedGrowth.co" 
+                className="h-10"
+              />
             </a>
             <p className="text-leveraged-white/70 max-w-xs">
               Helping businesses scale with predictable sales systems and elite closers.

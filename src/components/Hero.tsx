@@ -8,9 +8,11 @@ const Hero: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col items-center text-center mb-14 animate-fade-in">
           <div className="mb-6">
-            <p className="inline-block text-sm font-semibold py-1 px-3 rounded-full bg-leveraged-blue/10 text-leveraged-blue mb-4 animate-fade-in-fast">
-              LEVERAGEDGROWTH.CO
-            </p>
+            <img 
+              src="/lovable-uploads/fc3428f1-ae4a-470d-8c0b-b8294ec32f0c.png" 
+              alt="LeveragedGrowth.co" 
+              className="h-16 md:h-20 mb-6 animate-fade-in-fast"
+            />
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight gradient-text animate-fade-in" style={{ animationDelay: '200ms' }}>
