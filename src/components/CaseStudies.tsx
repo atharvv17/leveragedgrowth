@@ -14,9 +14,9 @@ const CaseStudies: React.FC = () => {
       isYoutubeVideo: true
     },
     {
-      clientName: "SaaS Platform Y",
-      result: "Increased conversion rate by 35%",
-      description: "Placed a trained sales closer who transformed their sales process and dramatically improved their demo-to-close ratio.",
+      clientName: "How Brandon Scaled His B2B Sales Coaching Business with LeveragedGrowth",
+      result: "",
+      description: "Brandon, a B2B sales coach, struggled with inconsistent lead flow and low conversion rates. LeveragedGrowth helped him streamline his sales process, generate high-quality inbound and outbound leads, and recruit top-tier closers to handle calls. Within months, he saw a massive increase in booked appointments and revenue growth.",
       imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       videoUrl: "https://www.youtube.com/watch?v=SfD6BD-NaO0",
       isYoutubeVideo: true
@@ -55,7 +55,6 @@ const CaseStudies: React.FC = () => {
               imageUrl={caseStudy.imageUrl}
               videoUrl={caseStudy.videoUrl}
               isYoutubeVideo={caseStudy.isYoutubeVideo}
-              additionalText={caseStudy.additionalText}
               delay={index * 200}
             />
           ))}
