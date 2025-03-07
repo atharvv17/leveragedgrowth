@@ -35,10 +35,7 @@ const Hero: React.FC = () => {
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="w-full h-full bg-gradient-to-tr from-leveraged-darkBlue/40 to-leveraged-blue/10 circuit-bg"></div>
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center max-w-sm">
-                  <p className="text-leveraged-blue font-semibold">Sales Dashboard Visualization</p>
-                  <p className="text-leveraged-white/70 text-sm mt-2">Your sales funnel on autopilot</p>
-                </div>
+                {/* Dashboard visualization text removed */}
               </div>
             </div>
           </div>
