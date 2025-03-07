@@ -1,6 +1,61 @@
 
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Check } from 'lucide-react';
+
+interface CounterProps {
+  end: number;
+  duration?: number;
+  suffix?: string;
+}
+
+const Counter: React.FC<CounterProps> = ({ end, duration = 2000, suffix = "" }) => {
+  const [count, setCount] = useState(0);
+  const countRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (countRef.current) {
+      observer.observe(countRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    let startTime: number;
+    let animationFrame: number;
+
+    const animate = (timestamp: number) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      const currentCount = Math.floor(progress * end);
+      
+      setCount(currentCount);
+
+      if (progress < 1) {
+        animationFrame = requestAnimationFrame(animate);
+      }
+    };
+
+    animationFrame = requestAnimationFrame(animate);
+
+    return () => cancelAnimationFrame(animationFrame);
+  }, [end, duration, isVisible]);
+
+  return <div ref={countRef} className="text-leveraged-blue font-bold text-3xl mb-2">{count}{suffix}</div>;
+};
 
 const About: React.FC = () => {
   const benefits = [
@@ -63,22 +118,22 @@ const About: React.FC = () => {
                 
                 <div className="grid grid-cols-2 gap-4 w-full">
                   <div className="glass-card rounded-lg p-5 text-center hover:border-leveraged-blue/30 transition-colors border border-white/10">
-                    <div className="text-leveraged-blue font-bold text-3xl mb-2">85%</div>
+                    <Counter end={85} suffix="%" />
                     <p className="text-sm text-leveraged-white/80">Avg. Increase in Qualified Leads</p>
                   </div>
                   
                   <div className="glass-card rounded-lg p-5 text-center hover:border-leveraged-blue/30 transition-colors border border-white/10">
-                    <div className="text-leveraged-blue font-bold text-3xl mb-2">40%</div>
+                    <Counter end={40} suffix="%" />
                     <p className="text-sm text-leveraged-white/80">Avg. Boost in Conversion Rates</p>
                   </div>
                   
                   <div className="glass-card rounded-lg p-5 text-center hover:border-leveraged-blue/30 transition-colors border border-white/10">
-                    <div className="text-leveraged-blue font-bold text-3xl mb-2">3x</div>
+                    <Counter end={3} suffix="x" />
                     <p className="text-sm text-leveraged-white/80">ROI Within First 90 Days</p>
                   </div>
                   
                   <div className="glass-card rounded-lg p-5 text-center hover:border-leveraged-blue/30 transition-colors border border-white/10">
-                    <div className="text-leveraged-blue font-bold text-3xl mb-2">100%</div>
+                    <Counter end={100} suffix="%" />
                     <p className="text-sm text-leveraged-white/80">Client Satisfaction Rate</p>
                   </div>
                 </div>
