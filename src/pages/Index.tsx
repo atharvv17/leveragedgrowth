@@ -49,7 +49,7 @@ const Index = () => {
       <BlurBackground />
       <Navbar />
       <Hero />
-      <div className={`space-y-12 transition-opacity duration-300 ${scrolled ? 'opacity-100' : 'opacity-0'}`}>
+      <div className={`space-y-24 transition-opacity duration-300 ${scrolled ? 'opacity-100' : 'opacity-0'}`}>
         <LogoCarousel />
         <Services />
         <CaseStudies />
