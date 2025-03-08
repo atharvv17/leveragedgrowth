@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
           </p>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight animate-fade-in" style={{ animationDelay: '200ms' }}>
-            <span className="gradient-text">Done-for-You Sales & Lead Gen</span> <br className="hidden md:block" />
+            <span className="gradient-text">Done-for-You Sales & Lead Gen</span> <br />
             <span className="text-leveraged-white">Get More Clients on Autopilot</span>
           </h1>
           
