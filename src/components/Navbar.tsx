@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
   return (
     <header 
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-6 md:px-12",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-6 px-6 md:px-12",
         scrolled ? "bg-black/80 backdrop-blur-lg border-b border-leveraged-blue/10 shadow-md" : "bg-transparent"
       )}
     >
@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
           <img 
             src="/lovable-uploads/6b629722-4746-41d8-b254-8a765d41acf3.png" 
             alt="LeveragedGrowth.co" 
-            className="h-12 md:h-14 filter drop-shadow-[0_0_10px_rgba(23,177,232,0.5)]"
+            className="h-16 md:h-20 filter drop-shadow-[0_0_15px_rgba(23,177,232,0.6)]"
           />
         </a>
         
@@ -83,7 +83,7 @@ const Navbar: React.FC = () => {
           <img 
             src="/lovable-uploads/6b629722-4746-41d8-b254-8a765d41acf3.png" 
             alt="LeveragedGrowth.co" 
-            className="h-20 filter drop-shadow-[0_0_10px_rgba(23,177,232,0.5)]"
+            className="h-24 filter drop-shadow-[0_0_15px_rgba(23,177,232,0.6)]"
           />
         </div>
         <nav className="flex flex-col space-y-6">
