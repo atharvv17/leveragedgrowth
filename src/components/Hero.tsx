@@ -11,12 +11,12 @@ const Hero: React.FC = () => {
             The Sales Agency for High-Performance Businesses
           </p>
           
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight animate-fade-in" style={{ animationDelay: '200ms' }}>
-            <div className="gradient-text whitespace-nowrap">Done-for-You Sales & Lead Gen</div>
-            <div className="text-leveraged-white whitespace-nowrap">Get More Clients on Autopilot</div>
+          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight animate-fade-in" style={{ animationDelay: '200ms' }}>
+            <div className="gradient-text text-balance sm:whitespace-nowrap">Done-for-You Sales & Lead Gen</div>
+            <div className="text-leveraged-white text-balance sm:whitespace-nowrap">Get More Clients on Autopilot</div>
           </h1>
           
-          <p className="text-base sm:text-lg md:text-xl text-leveraged-white/90 mb-6 sm:mb-8 animate-fade-in" style={{ animationDelay: '400ms' }}>
+          <p className="text-sm sm:text-lg md:text-xl text-leveraged-white/90 mb-6 sm:mb-8 animate-fade-in" style={{ animationDelay: '400ms' }}>
             We build and optimize your outbound/inbound sales system OR place elite sales closers in your business to increase revenue.
           </p>
           

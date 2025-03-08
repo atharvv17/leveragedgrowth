@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -71,7 +70,6 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-        // Custom colors for LeveragedGrowth
         leveraged: {
           dark: '#000000', // Pure black like logo background
           darkAlt: '#0A0A0A', // Slightly lighter black for contrast
@@ -146,6 +144,9 @@ export default {
         'pulse-glow': 'pulse-glow 2s infinite',
         'flow-lines': 'flow-lines 5s infinite linear',
         'float': 'float 6s ease-in-out infinite'
+			},
+			textSizing: {
+				balance: ['text-wrap:balance'],
 			}
 		}
 	},
