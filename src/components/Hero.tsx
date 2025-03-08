@@ -12,8 +12,8 @@ const Hero: React.FC = () => {
           </p>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight animate-fade-in" style={{ animationDelay: '200ms' }}>
-            <div className="gradient-text whitespace-nowrap">Done-for-You Sales & Lead Gen</div>
-            <div className="text-leveraged-white whitespace-nowrap">Get More Clients on Autopilot</div>
+            <div className="gradient-text whitespace-nowrap md:whitespace-normal">Done-for-You Sales & Lead Gen</div>
+            <div className="text-leveraged-white whitespace-nowrap md:whitespace-normal">Get More Clients on Autopilot</div>
           </h1>
           
           <p className="text-lg md:text-xl text-leveraged-white/90 mb-8 animate-fade-in" style={{ animationDelay: '400ms' }}>
