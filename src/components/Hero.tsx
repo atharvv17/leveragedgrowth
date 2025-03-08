@@ -5,8 +5,8 @@ import { ArrowRight } from 'lucide-react';
 const Hero: React.FC = () => {
   return (
     <section id="hero" className="flex items-center justify-center min-h-[600px] w-full pt-12 pb-12 px-6 md:px-12 lg:px-24 relative">
-      <div className="max-w-7xl mx-auto w-full">
-        <div className="flex flex-col items-center text-center animate-fade-in">
+      <div className="max-w-7xl mx-auto w-full flex items-center justify-center">
+        <div className="flex flex-col items-center text-center max-w-3xl mx-auto animate-fade-in">
           <p className="text-lg md:text-xl text-leveraged-blue font-medium mb-4 animate-fade-in-fast">
             The Sales Agency for High-Performance Businesses
           </p>
@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
             <span className="text-leveraged-white">Get More Clients on Autopilot</span>
           </h1>
           
-          <p className="text-lg md:text-xl text-leveraged-white/90 max-w-3xl mb-8 animate-fade-in" style={{ animationDelay: '400ms' }}>
+          <p className="text-lg md:text-xl text-leveraged-white/90 mb-8 animate-fade-in" style={{ animationDelay: '400ms' }}>
             We build and optimize your outbound/inbound sales system OR place elite sales closers in your business to increase revenue.
           </p>
           
