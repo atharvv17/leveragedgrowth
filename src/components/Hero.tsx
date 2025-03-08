@@ -4,19 +4,19 @@ import { ArrowRight } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <section id="hero" className="flex items-center justify-center h-screen max-h-[750px] w-full pt-0 pb-0 px-6 md:px-12 lg:px-24 relative">
+    <section id="hero" className="flex items-center justify-center h-screen max-h-[700px] w-full pt-0 pb-0 px-6 md:px-12 lg:px-24 relative">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col items-center text-center animate-fade-in">
-          <p className="text-lg md:text-xl text-leveraged-blue font-medium mb-4 animate-fade-in-fast">
+          <p className="text-lg md:text-xl text-leveraged-blue font-medium mb-3 animate-fade-in-fast">
             The Sales Agency for High-Performance Businesses
           </p>
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight animate-fade-in" style={{ animationDelay: '200ms' }}>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight animate-fade-in" style={{ animationDelay: '200ms' }}>
             <span className="gradient-text">Done-for-You Sales & Lead Gen</span> <br className="hidden md:block" />
             <span className="text-leveraged-white">Get More Clients on Autopilot</span>
           </h1>
           
-          <p className="text-lg md:text-xl text-leveraged-white/90 max-w-3xl mb-8 animate-fade-in" style={{ animationDelay: '400ms' }}>
+          <p className="text-lg md:text-xl text-leveraged-white/90 max-w-3xl mb-6 animate-fade-in" style={{ animationDelay: '400ms' }}>
             We build and optimize your outbound/inbound sales system OR place elite sales closers in your business to increase revenue.
           </p>
           

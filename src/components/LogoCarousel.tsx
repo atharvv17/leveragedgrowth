@@ -83,9 +83,9 @@ const LogoCarousel: React.FC = () => {
   const allLogos = [...logos, ...logos];
 
   return (
-    <section className="py-6 md:py-10 bg-gradient-to-r from-leveraged-dark to-leveraged-darkAlt overflow-hidden">
+    <section className="py-4 md:py-6 bg-gradient-to-r from-leveraged-dark to-leveraged-darkAlt overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 gradient-text">
+        <h2 className="text-2xl md:text-3xl font-bold text-center mb-4 gradient-text">
           Trusted By Industry Leaders
         </h2>
         
@@ -97,7 +97,7 @@ const LogoCarousel: React.FC = () => {
           {/* Logo slider */}
           <div 
             ref={logoContainerRef}
-            className="flex items-center py-8 overflow-hidden"
+            className="flex items-center py-6 overflow-hidden"
           >
             <div className="flex space-x-24 md:space-x-32 lg:space-x-40">
               {allLogos.map((logo, index) => (

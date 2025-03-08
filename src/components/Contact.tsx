@@ -4,26 +4,26 @@ import { Calendar, Mail } from 'lucide-react';
 
 const Contact: React.FC = () => {
   return (
-    <section id="contact" className="py-20 px-6 md:px-12 lg:px-24 relative">
+    <section id="contact" className="py-10 px-6 md:px-12 lg:px-24 relative">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16 animate-fade-in">
+        <div className="text-center mb-10 animate-fade-in">
           <p className="inline-block text-sm font-semibold py-1 px-3 rounded-full bg-leveraged-blue/10 text-leveraged-blue mb-4 blue-shadow">
             CONTACT US
           </p>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text glow-text">
             Let's Build Your Sales Machine
           </h2>
-          <p className="text-2xl font-medium text-leveraged-white mb-8">
+          <p className="text-2xl font-medium text-leveraged-white mb-6">
             Schedule a Free Strategy Call Today
           </p>
         </div>
         
-        <div className="glass-card rounded-xl p-8 border border-leveraged-blue/10 animate-fade-in mb-12 blue-shadow-lg">
+        <div className="glass-card rounded-xl p-8 border border-leveraged-blue/10 animate-fade-in mb-8 blue-shadow-lg">
           <h3 className="text-xl md:text-2xl font-bold mb-6 text-white">
             What Happens Next?
           </h3>
           
-          <div className="space-y-6">
+          <div className="space-y-4">
             <div className="flex gap-4">
               <div className="flex-shrink-0 w-8 h-8 rounded-full bg-leveraged-blue/20 flex items-center justify-center text-leveraged-blue font-bold blue-shadow">
                 1

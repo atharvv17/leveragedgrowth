@@ -80,7 +80,7 @@ const About: React.FC = () => {
   ];
 
   return (
-    <section id="about" className="py-20 px-6 md:px-12 lg:px-24 relative">
+    <section id="about" className="py-10 px-6 md:px-12 lg:px-24 relative">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in">
@@ -146,8 +146,8 @@ const About: React.FC = () => {
         </div>
 
         {/* Meet the Founders Section */}
-        <div className="mt-24 animate-fade-in">
-          <div className="text-center mb-12">
+        <div className="mt-16 animate-fade-in">
+          <div className="text-center mb-8">
             <p className="inline-block text-sm font-semibold py-1 px-3 rounded-full bg-leveraged-blue/10 text-leveraged-blue mb-4">
               THE TEAM
             </p>
