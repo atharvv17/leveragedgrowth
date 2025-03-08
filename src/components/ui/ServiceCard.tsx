@@ -26,7 +26,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   return (
     <div 
       className={cn(
-        "glass-card rounded-xl p-6 md:p-8 transform hover:scale-[1.01] transition-all duration-300 border border-white/10 hover:border-leveraged-blue/30 group animate-fade-in",
+        "glass-card rounded-xl p-6 md:p-8 transform hover:scale-[1.01] transition-all duration-300 border border-leveraged-blue/10 hover:border-leveraged-blue/30 group animate-fade-in",
         className
       )}
       style={{ animationDelay: `${delay}ms` }}
@@ -51,7 +51,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       
       <a 
         href={ctaLink}
-        className="inline-flex items-center justify-center w-full px-5 py-3 rounded-lg bg-leveraged-blue text-white font-medium hover:shadow-[0_0_15px_rgba(0,163,255,0.5)] transition-all animate-pulse-glow"
+        className="inline-flex items-center justify-center w-full px-5 py-3 rounded-lg bg-leveraged-blue text-black font-medium hover:shadow-[0_0_15px_rgba(23,177,232,0.5)] transition-all animate-pulse-glow"
       >
         {ctaText}
       </a>

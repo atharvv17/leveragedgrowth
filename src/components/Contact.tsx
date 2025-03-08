@@ -18,7 +18,7 @@ const Contact: React.FC = () => {
           </p>
         </div>
         
-        <div className="glass-card rounded-xl p-8 border border-white/10 animate-fade-in mb-12 blue-shadow-lg">
+        <div className="glass-card rounded-xl p-8 border border-leveraged-blue/10 animate-fade-in mb-12 blue-shadow-lg">
           <h3 className="text-xl md:text-2xl font-bold mb-6 text-white">
             What Happens Next?
           </h3>
@@ -74,7 +74,7 @@ const Contact: React.FC = () => {
               href="https://calendly.com/leveragegrowthbiz/30min" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-leveraged-blue text-white px-6 py-3 rounded-lg hover:bg-leveraged-blue/80 transition-all duration-300 font-medium text-lg btn-shadow"
+              className="flex items-center gap-2 bg-leveraged-blue text-black px-6 py-3 rounded-lg hover:bg-leveraged-blue/90 transition-all duration-300 font-medium text-lg btn-shadow"
             >
               <Calendar className="w-5 h-5" />
               Book a Call

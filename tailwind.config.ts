@@ -65,11 +65,11 @@ export default {
 				},
         // Custom colors for LeveragedGrowth
         leveraged: {
-          dark: '#0A0A0A',
-          darkAlt: '#121212',
-          blue: '#00A3FF',
-          darkBlue: '#1C3D5A',
-          white: '#EAEAEA',
+          dark: '#000000', // Pure black like logo background
+          darkAlt: '#0A0A0A', // Slightly lighter black for contrast
+          blue: '#17B1E8', // Bright blue from logo
+          darkBlue: '#0A5573', // Darker blue for contrast
+          white: '#FFFFFF', // Pure white like logo text
         }
 			},
 			borderRadius: {
@@ -106,10 +106,10 @@ export default {
         },
         'pulse-glow': {
           '0%, 100%': {
-            boxShadow: '0 0 8px 2px rgba(0, 163, 255, 0.3)'
+            boxShadow: '0 0 8px 2px rgba(23, 177, 232, 0.3)'
           },
           '50%': {
-            boxShadow: '0 0 15px 5px rgba(0, 163, 255, 0.5)'
+            boxShadow: '0 0 15px 5px rgba(23, 177, 232, 0.5)'
           }
         },
         'flow-lines': {

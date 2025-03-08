@@ -11,9 +11,9 @@ const Hero: React.FC = () => {
             The Sales Agency for High-Performance Businesses
           </p>
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight gradient-text animate-fade-in" style={{ animationDelay: '200ms' }}>
-            Done-for-You Sales & Lead Gen <br className="hidden md:block" />
-            <span className="text-white">Get More Clients on Autopilot</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight animate-fade-in" style={{ animationDelay: '200ms' }}>
+            <span className="gradient-text">Done-for-You Sales & Lead Gen</span> <br className="hidden md:block" />
+            <span className="text-leveraged-white">Get More Clients on Autopilot</span>
           </h1>
           
           <p className="text-lg md:text-xl text-leveraged-white/90 max-w-3xl mb-8 animate-fade-in" style={{ animationDelay: '400ms' }}>
@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
             href="https://calendly.com/leveragegrowthbiz/30min"
             target="_blank"
             rel="noopener noreferrer" 
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-leveraged-blue text-white font-medium text-lg hover:gap-3 transition-all hover:shadow-[0_0_20px_rgba(0,163,255,0.6)] animate-pulse-glow animate-fade-in"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-leveraged-blue text-black font-medium text-lg hover:gap-3 transition-all hover:shadow-[0_0_20px_rgba(23,177,232,0.6)] animate-pulse-glow animate-fade-in"
             style={{ animationDelay: '600ms' }}
           >
             Get a Free Consultation

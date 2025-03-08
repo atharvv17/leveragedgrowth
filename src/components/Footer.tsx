@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="py-10 px-6 md:px-12 lg:px-24 bg-leveraged-darkAlt border-t border-white/5">
+    <footer className="py-10 px-6 md:px-12 lg:px-24 bg-black border-t border-leveraged-blue/10">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-3 gap-10 mb-10">
           <div>
@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
         
-        <div className="border-t border-white/5 pt-6 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-leveraged-blue/10 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-leveraged-white/50 text-sm">
             &copy; {currentYear} LeveragedGrowth. All rights reserved.
           </p>

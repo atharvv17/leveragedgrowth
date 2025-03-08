@@ -34,7 +34,7 @@ const FAQ: React.FC = () => {
   };
   
   return (
-    <section id="faq" className="py-20 px-6 md:px-12 lg:px-24 relative bg-leveraged-darkAlt">
+    <section id="faq" className="py-20 px-6 md:px-12 lg:px-24 relative bg-black">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <p className="inline-block text-sm font-semibold py-1 px-3 rounded-full bg-leveraged-blue/10 text-leveraged-blue mb-4">
@@ -56,7 +56,7 @@ const FAQ: React.FC = () => {
                 "glass-card rounded-xl border transition-all duration-300 overflow-hidden animate-fade-in",
                 openIndex === index 
                   ? "border-leveraged-blue/40 glow-border" 
-                  : "border-white/5 hover:border-white/20"
+                  : "border-leveraged-blue/5 hover:border-leveraged-blue/20"
               )}
               style={{ animationDelay: `${index * 100}ms` }}
             >

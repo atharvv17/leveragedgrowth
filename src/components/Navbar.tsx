@@ -30,15 +30,15 @@ const Navbar: React.FC = () => {
     <header 
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-6 md:px-12",
-        scrolled ? "bg-leveraged-dark/80 backdrop-blur-lg border-b border-white/5 shadow-md" : "bg-transparent"
+        scrolled ? "bg-black/80 backdrop-blur-lg border-b border-leveraged-blue/10 shadow-md" : "bg-transparent"
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <a href="#" className="hover:opacity-90 transition-opacity">
           <img 
-            src="/lovable-uploads/08c3eb96-6c27-4ca5-97af-44bdaa022844.png" 
+            src="/lovable-uploads/6b629722-4746-41d8-b254-8a765d41acf3.png" 
             alt="LeveragedGrowth.co" 
-            className="h-36 md:h-40 filter drop-shadow-[0_0_10px_rgba(0,163,255,0.5)]"
+            className="h-12 md:h-14 filter drop-shadow-[0_0_10px_rgba(23,177,232,0.5)]"
           />
         </a>
         
@@ -60,7 +60,7 @@ const Navbar: React.FC = () => {
           href="https://calendly.com/leveragegrowthbiz/30min" 
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden md:inline-flex items-center px-5 py-2.5 rounded-lg bg-leveraged-blue text-white font-medium text-sm hover:bg-leveraged-blue/90 transition-all hover:shadow-[0_0_15px_rgba(0,163,255,0.5)] animate-pulse-glow"
+          className="hidden md:inline-flex items-center px-5 py-2.5 rounded-lg bg-leveraged-blue text-black font-medium text-sm hover:bg-leveraged-blue/90 transition-all hover:shadow-[0_0_15px_rgba(23,177,232,0.5)] animate-pulse-glow"
         >
           Get a Free Consultation
         </a>
@@ -76,14 +76,14 @@ const Navbar: React.FC = () => {
       
       {/* Mobile Navigation */}
       <div className={cn(
-        "fixed inset-0 bg-leveraged-darkAlt/95 backdrop-blur-lg z-40 transition-all duration-300 flex flex-col pt-24 px-6",
+        "fixed inset-0 bg-black/95 backdrop-blur-lg z-40 transition-all duration-300 flex flex-col pt-24 px-6",
         isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full pointer-events-none"
       )}>
         <div className="flex justify-center mb-8">
           <img 
-            src="/lovable-uploads/08c3eb96-6c27-4ca5-97af-44bdaa022844.png" 
+            src="/lovable-uploads/6b629722-4746-41d8-b254-8a765d41acf3.png" 
             alt="LeveragedGrowth.co" 
-            className="h-36 filter drop-shadow-[0_0_10px_rgba(0,163,255,0.5)]"
+            className="h-20 filter drop-shadow-[0_0_10px_rgba(23,177,232,0.5)]"
           />
         </div>
         <nav className="flex flex-col space-y-6">
@@ -101,7 +101,7 @@ const Navbar: React.FC = () => {
             href="https://calendly.com/leveragegrowthbiz/30min"
             target="_blank"
             rel="noopener noreferrer" 
-            className="inline-flex items-center justify-center px-5 py-3 mt-4 rounded-lg bg-leveraged-blue text-white font-medium hover:bg-leveraged-blue/90 transition-all animate-pulse-glow"
+            className="inline-flex items-center justify-center px-5 py-3 mt-4 rounded-lg bg-leveraged-blue text-black font-medium hover:bg-leveraged-blue/90 transition-all animate-pulse-glow"
             onClick={() => setIsMenuOpen(false)}
           >
             Get a Free Consultation
