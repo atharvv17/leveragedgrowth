@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <section id="hero" className="flex items-center justify-center h-screen w-full pt-0 pb-0 px-6 md:px-12 lg:px-24 relative">
+    <section id="hero" className="flex items-center justify-center h-screen max-h-[750px] w-full pt-0 pb-0 px-6 md:px-12 lg:px-24 relative">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col items-center text-center animate-fade-in">
           <p className="text-lg md:text-xl text-leveraged-blue font-medium mb-4 animate-fade-in-fast">

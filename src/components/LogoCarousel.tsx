@@ -83,9 +83,9 @@ const LogoCarousel: React.FC = () => {
   const allLogos = [...logos, ...logos];
 
   return (
-    <section className="py-12 md:py-20 bg-gradient-to-r from-leveraged-dark to-leveraged-darkAlt overflow-hidden">
+    <section className="py-6 md:py-10 bg-gradient-to-r from-leveraged-dark to-leveraged-darkAlt overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-center mb-12 gradient-text">
+        <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 gradient-text">
           Trusted By Industry Leaders
         </h2>
         
