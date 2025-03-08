@@ -1,5 +1,5 @@
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import BlurBackground from '@/components/ui/BlurBackground';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
@@ -16,7 +16,8 @@ const Index = () => {
   
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > window.innerHeight * 0.8);
+      // Show content as soon as user starts scrolling
+      setScrolled(window.scrollY > 5);
     };
     
     window.addEventListener('scroll', handleScroll);
@@ -48,7 +49,7 @@ const Index = () => {
       <BlurBackground />
       <Navbar />
       <Hero />
-      <div className={`transition-opacity duration-500 ${scrolled ? 'opacity-100' : 'opacity-0'}`}>
+      <div className={`transition-opacity duration-300 ${scrolled ? 'opacity-100' : 'opacity-0'}`}>
         <LogoCarousel />
         <Services />
         <CaseStudies />
