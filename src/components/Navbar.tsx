@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
           <img 
             src="/lovable-uploads/960f680d-759d-4244-bee8-c8f66fa85ebb.png" 
             alt="LeveragedGrowth.co" 
-            className="h-32 md:h-44 filter drop-shadow-[0_0_15px_rgba(23,177,232,0.6)]"
+            className="h-24 md:h-36 filter drop-shadow-[0_0_15px_rgba(23,177,232,0.6)]"
           />
         </a>
         
@@ -83,7 +83,7 @@ const Navbar: React.FC = () => {
           <img 
             src="/lovable-uploads/960f680d-759d-4244-bee8-c8f66fa85ebb.png" 
             alt="LeveragedGrowth.co" 
-            className="h-48 filter drop-shadow-[0_0_15px_rgba(23,177,232,0.6)]"
+            className="h-40 filter drop-shadow-[0_0_15px_rgba(23,177,232,0.6)]"
           />
         </div>
         <nav className="flex flex-col space-y-6">

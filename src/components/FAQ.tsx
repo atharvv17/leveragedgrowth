@@ -34,9 +34,9 @@ const FAQ: React.FC = () => {
   };
   
   return (
-    <section id="faq" className="py-10 px-6 md:px-12 lg:px-24 relative bg-black">
+    <section id="faq" className="py-20 px-6 md:px-12 lg:px-24 relative bg-black">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-10 animate-fade-in">
+        <div className="text-center mb-16 animate-fade-in">
           <p className="inline-block text-sm font-semibold py-1 px-3 rounded-full bg-leveraged-blue/10 text-leveraged-blue mb-4">
             FAQ
           </p>
@@ -48,7 +48,7 @@ const FAQ: React.FC = () => {
           </p>
         </div>
         
-        <div className="space-y-3">
+        <div className="space-y-5">
           {faqs.map((faq, index) => (
             <div 
               key={index}

@@ -32,9 +32,9 @@ const CaseStudies: React.FC = () => {
   ];
 
   return (
-    <section id="case-studies" className="py-10 px-6 md:px-12 lg:px-24 relative bg-leveraged-darkAlt">
+    <section id="case-studies" className="py-20 px-6 md:px-12 lg:px-24 relative bg-leveraged-darkAlt">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-10 animate-fade-in">
+        <div className="text-center mb-16 animate-fade-in">
           <p className="inline-block text-sm font-semibold py-1 px-3 rounded-full bg-leveraged-blue/10 text-leveraged-blue mb-4">
             CLIENT TESTIMONIALS
           </p>
@@ -46,7 +46,7 @@ const CaseStudies: React.FC = () => {
           </p>
         </div>
         
-        <div className="flex flex-col gap-6 max-w-4xl mx-auto">
+        <div className="flex flex-col gap-8 max-w-4xl mx-auto">
           {caseStudies.map((caseStudy, index) => (
             <CaseStudyCard
               key={index}
@@ -61,7 +61,7 @@ const CaseStudies: React.FC = () => {
           ))}
         </div>
         
-        <div className="mt-8 text-center animate-fade-in">
+        <div className="mt-12 text-center animate-fade-in">
           <a 
             href="#contact" 
             className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-transparent border border-leveraged-blue text-leveraged-blue font-medium hover:bg-leveraged-blue/10 transition-all hover:gap-3"
