@@ -12,8 +12,8 @@ const SolutionsHero: React.FC = () => {
           </p>
           
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            <span className="gradient-text">Done-for-You Sales & Lead Gen Systems</span>
-            <span className="block text-leveraged-white mt-2 text-xl sm:text-2xl md:text-3xl">
+            <span className="gradient-text block mb-2">Done-for-You Sales & Lead Gen Systems</span>
+            <span className="block text-leveraged-white text-xl sm:text-2xl md:text-3xl">
               Scale your business with automated, high-converting sales solutions.
             </span>
           </h1>
