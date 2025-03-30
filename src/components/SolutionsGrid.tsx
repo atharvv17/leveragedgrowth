@@ -59,7 +59,7 @@ const SolutionsGrid: React.FC = () => {
     ctaLink: "https://calendly.com/leveragegrowthbiz/30min",
     accentColor: "rose-400"
   }];
-  return <section className="py-10 px-6 lg:px-24 relative md:px-[16px]">
+  return <section className="px-6 lg:px-24 relative md:px-[16px] my-0 py-px">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <p className="inline-block text-sm font-semibold py-1 px-3 rounded-full bg-leveraged-blue/10 text-leveraged-blue mb-4">

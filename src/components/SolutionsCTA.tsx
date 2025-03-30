@@ -1,10 +1,7 @@
-
 import React from 'react';
 import { ArrowRight, Rocket } from 'lucide-react';
-
 const SolutionsCTA: React.FC = () => {
-  return (
-    <section className="py-16 px-6 md:px-12 lg:px-24 relative">
+  return <section className="px-6 md:px-12 lg:px-24 relative py-0">
       <div className="max-w-4xl mx-auto">
         <div className="glass-card rounded-xl p-8 md:p-12 border border-leveraged-blue/20 relative overflow-hidden">
           {/* Background glow effect */}
@@ -23,12 +20,7 @@ const SolutionsCTA: React.FC = () => {
               Book a free strategy call, and we'll create a custom roadmap for your business.
             </p>
             
-            <a 
-              href="https://calendly.com/leveragegrowthbiz/30min"
-              target="_blank"
-              rel="noopener noreferrer" 
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-leveraged-blue text-black font-medium text-lg hover:gap-3 transition-all hover:shadow-[0_0_25px_rgba(23,177,232,0.7)] animate-pulse-glow"
-            >
+            <a href="https://calendly.com/leveragegrowthbiz/30min" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-leveraged-blue text-black font-medium text-lg hover:gap-3 transition-all hover:shadow-[0_0_25px_rgba(23,177,232,0.7)] animate-pulse-glow">
               Book a Strategy Call
               <ArrowRight size={20} />
             </a>
@@ -41,8 +33,6 @@ const SolutionsCTA: React.FC = () => {
           </p>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default SolutionsCTA;
