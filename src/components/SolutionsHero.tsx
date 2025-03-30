@@ -35,13 +35,11 @@ const SolutionsHero: React.FC = () => {
           
           <div className="w-full max-w-4xl mt-16 relative">
             <div className="w-full h-[200px] sm:h-[250px] md:h-[300px] glass-card rounded-xl overflow-hidden relative">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <p className="text-leveraged-white/70 text-sm">
-                    [Futuristic Sales Pipeline Animation]
-                  </p>
-                </div>
-              </div>
+              <img 
+                src="/lovable-uploads/b3134814-d8cd-445c-b56e-359755a54e4b.png" 
+                alt="Sales Pipeline: Leads to Qualified Leads to Sales to Customers" 
+                className="w-full h-full object-contain p-4"
+              />
             </div>
           </div>
         </div>
