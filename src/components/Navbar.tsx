@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Link } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,6 +20,8 @@ const Navbar: React.FC = () => {
   }, []);
 
   const navLinks = [
+    { name: 'Home', href: '/' },
+    { name: 'Solutions', href: '/solutions' },
     { name: 'Services', href: '#services' },
     { name: 'Case Studies', href: '#case-studies' },
     { name: 'About', href: '#about' },
@@ -34,24 +37,34 @@ const Navbar: React.FC = () => {
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <a href="#" className="hover:opacity-90 transition-opacity">
+        <Link to="/" className="hover:opacity-90 transition-opacity">
           <img 
             src="/lovable-uploads/960f680d-759d-4244-bee8-c8f66fa85ebb.png" 
             alt="LeveragedGrowth.co" 
             className="h-24 md:h-36 filter drop-shadow-[0_0_15px_rgba(23,177,232,0.6)]"
           />
-        </a>
+        </Link>
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
           {navLinks.map((link) => (
-            <a 
-              key={link.name}
-              href={link.href}
-              className="text-leveraged-white hover:text-leveraged-blue transition-colors text-sm font-medium"
-            >
-              {link.name}
-            </a>
+            link.href.startsWith('#') ? (
+              <a 
+                key={link.name}
+                href={link.href}
+                className="text-leveraged-white hover:text-leveraged-blue transition-colors text-sm font-medium"
+              >
+                {link.name}
+              </a>
+            ) : (
+              <Link 
+                key={link.name}
+                to={link.href}
+                className="text-leveraged-white hover:text-leveraged-blue transition-colors text-sm font-medium"
+              >
+                {link.name}
+              </Link>
+            )
           ))}
         </nav>
         
@@ -88,14 +101,25 @@ const Navbar: React.FC = () => {
         </div>
         <nav className="flex flex-col space-y-6">
           {navLinks.map((link) => (
-            <a 
-              key={link.name}
-              href={link.href}
-              className="text-leveraged-white hover:text-leveraged-blue transition-colors text-lg font-medium"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {link.name}
-            </a>
+            link.href.startsWith('#') ? (
+              <a 
+                key={link.name}
+                href={link.href}
+                className="text-leveraged-white hover:text-leveraged-blue transition-colors text-lg font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {link.name}
+              </a>
+            ) : (
+              <Link 
+                key={link.name}
+                to={link.href}
+                className="text-leveraged-white hover:text-leveraged-blue transition-colors text-lg font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {link.name}
+              </Link>
+            )
           ))}
           <a 
             href="https://calendly.com/leveragegrowthbiz/30min"
