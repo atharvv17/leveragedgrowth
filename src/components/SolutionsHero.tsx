@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react';
 const SolutionsHero: React.FC = () => {
   return <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-24 relative md:px-[79px] py-[24px]">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col items-center text-center max-w-4xl mx-auto animate-fade-in">
+        <div className="flex flex-col items-center text-center max-w-4xl mx-auto animate-fade-in px-[58px] my-[144px]">
           <p className="text-base sm:text-lg text-leveraged-blue font-medium mb-3 animate-fade-in-fast">
             Our Solutions
           </p>
