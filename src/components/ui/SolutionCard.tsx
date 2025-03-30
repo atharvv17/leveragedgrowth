@@ -5,6 +5,7 @@ import { cn } from '@/lib/utils';
 
 interface SolutionCardProps {
   title: string;
+  subtitle: string;
   icon: React.ReactNode;
   description: string[];
   ctaText: string;
@@ -15,6 +16,7 @@ interface SolutionCardProps {
 
 const SolutionCard: React.FC<SolutionCardProps> = ({
   title,
+  subtitle,
   icon,
   description,
   ctaText,
@@ -30,7 +32,7 @@ const SolutionCard: React.FC<SolutionCardProps> = ({
       )}
       style={{ animationDelay: `${delay}ms` }}
     >
-      <div className="flex items-center gap-3 mb-5">
+      <div className="flex items-center gap-3 mb-2">
         <div className={cn("p-2 rounded-lg", `bg-${accentColor}/10`)}>
           {icon}
         </div>
@@ -38,6 +40,10 @@ const SolutionCard: React.FC<SolutionCardProps> = ({
           {title}
         </h3>
       </div>
+      
+      <p className="text-sm text-leveraged-white/80 mb-4 ml-12">
+        {subtitle}
+      </p>
       
       <ul className="space-y-3 mb-6 flex-grow">
         {description.map((item, index) => (

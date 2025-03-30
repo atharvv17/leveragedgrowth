@@ -9,6 +9,7 @@ const SolutionsGrid: React.FC = () => {
   const solutions = [
     {
       title: "SalesSites™",
+      subtitle: "High-Converting Websites & Landing Pages",
       icon: <Globe className="text-blue-400" size={24} />,
       description: [
         "Optimized for conversions, not just design.",
@@ -21,6 +22,7 @@ const SolutionsGrid: React.FC = () => {
     },
     {
       title: "SalesBoost™",
+      subtitle: "Paid Ads & Performance Marketing",
       icon: <CreditCard className="text-purple-400" size={24} />,
       description: [
         "Full Meta, Google & LinkedIn Ads management.",
@@ -33,6 +35,7 @@ const SolutionsGrid: React.FC = () => {
     },
     {
       title: "AI Caller™",
+      subtitle: "AI-Powered Sales Calls & Appointment Setting",
       icon: <Phone className="text-green-400" size={24} />,
       description: [
         "AI-powered cold calling & follow-ups.",
@@ -45,6 +48,7 @@ const SolutionsGrid: React.FC = () => {
     },
     {
       title: "SalesNetwork™",
+      subtitle: "Social Selling & LinkedIn Outreach",
       icon: <Linkedin className="text-blue-500" size={24} />,
       description: [
         "LinkedIn profile optimization & authority positioning.",
@@ -57,6 +61,7 @@ const SolutionsGrid: React.FC = () => {
     },
     {
       title: "LeadFlowAI™",
+      subtitle: "AI-Powered Lead Generation",
       icon: <Database className="text-cyan-400" size={24} />,
       description: [
         "Automated data scraping for high-quality leads.",
@@ -69,6 +74,7 @@ const SolutionsGrid: React.FC = () => {
     },
     {
       title: "SalesFlow™",
+      subtitle: "Sales Funnel Automation",
       icon: <GitBranch className="text-amber-400" size={24} />,
       description: [
         "Automated sales funnels for lead nurturing & closing.",
@@ -81,6 +87,7 @@ const SolutionsGrid: React.FC = () => {
     },
     {
       title: "SalesMastery™",
+      subtitle: "Sales Team Training & Coaching",
       icon: <BookOpen className="text-rose-400" size={24} />,
       description: [
         "1-on-1 coaching for founders & sales teams.",
@@ -113,6 +120,7 @@ const SolutionsGrid: React.FC = () => {
             <SolutionCard
               key={index}
               title={solution.title}
+              subtitle={solution.subtitle}
               icon={solution.icon}
               description={solution.description}
               ctaText={solution.ctaText}
