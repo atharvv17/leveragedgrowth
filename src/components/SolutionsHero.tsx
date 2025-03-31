@@ -1,10 +1,7 @@
-
 import React from 'react';
 import { ArrowRight, Zap } from 'lucide-react';
-
 const SolutionsHero: React.FC = () => {
-  return (
-    <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-24 relative md:px-[74px] overflow-hidden">
+  return <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-24 relative md:px-[74px] overflow-hidden">
       {/* Background particle effect */}
       <div className="absolute inset-0 circuit-bg opacity-30"></div>
       
@@ -30,20 +27,12 @@ const SolutionsHero: React.FC = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <a 
-                href="https://calendly.com/leveragegrowthbiz/30min"
-                target="_blank"
-                rel="noopener noreferrer" 
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-leveraged-blue text-black font-medium hover:gap-3 transition-all hover:shadow-[0_0_20px_rgba(23,177,232,0.6)] animate-pulse-glow"
-              >
+              <a href="https://calendly.com/leveragegrowthbiz/30min" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-leveraged-blue text-black font-medium hover:gap-3 transition-all hover:shadow-[0_0_20px_rgba(23,177,232,0.6)] animate-pulse-glow">
                 Book a Strategy Call
                 <ArrowRight size={18} />
               </a>
               
-              <a 
-                href="#contact"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-transparent border border-leveraged-blue/50 text-leveraged-blue font-medium hover:bg-leveraged-blue/10 transition-all"
-              >
+              <a href="#contact" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-transparent border border-leveraged-blue/50 text-leveraged-blue font-medium hover:bg-leveraged-blue/10 transition-all">
                 Learn More
                 <ArrowRight size={18} />
               </a>
@@ -53,17 +42,11 @@ const SolutionsHero: React.FC = () => {
           <div className="w-full lg:w-1/2 flex justify-center items-center floating">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-leveraged-blue/20 to-blue-500/20 blur-xl rounded-full transform scale-90 opacity-70"></div>
-              <img 
-                src="/lovable-uploads/08c3eb96-6c27-4ca5-97af-44bdaa022844.png" 
-                alt="Sales Pipeline Visualization" 
-                className="relative z-10 rounded-xl max-w-full border border-leveraged-blue/30 shadow-[0_0_30px_rgba(23,177,232,0.3)]"
-              />
+              <img alt="Sales Pipeline Visualization" className="relative z-10 rounded-xl max-w-full border border-leveraged-blue/30 shadow-[0_0_30px_rgba(23,177,232,0.3)]" src="/lovable-uploads/8382422d-fb8c-4dfa-ace6-d9eeca7c8940.jpg" />
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default SolutionsHero;
