@@ -72,27 +72,27 @@ const Index = () => {
       <Navbar />
       <Hero />
       <div className={`transition-opacity duration-1000 ${scrolled ? 'opacity-100' : 'opacity-0'}`}>
-        <div className="animate-on-scroll">
+        <div className="animate-on-scroll bg-black">
           <LogoCarousel />
         </div>
         
-        <div className="animate-on-scroll bg-gradient-blue section-transition" style={{"--next-bg-color": "rgba(0,0,0,1)"} as React.CSSProperties}>
+        <div className="animate-on-scroll bg-white text-black section-transition" style={{"--next-bg-color": "rgba(0,0,0,1)"} as React.CSSProperties}>
           <Services />
         </div>
         
-        <div className="animate-on-scroll bg-leveraged-dark section-transition" style={{"--next-bg-color": "rgba(10,35,66,1)"} as React.CSSProperties}>
+        <div className="animate-on-scroll bg-black section-transition" style={{"--next-bg-color": "rgba(255,255,255,1)"} as React.CSSProperties}>
           <CaseStudies />
         </div>
         
-        <div className="animate-on-scroll bg-deep-blue section-transition" style={{"--next-bg-color": "rgba(0,0,0,1)"} as React.CSSProperties}>
+        <div className="animate-on-scroll bg-white text-black section-transition" style={{"--next-bg-color": "rgba(0,0,0,1)"} as React.CSSProperties}>
           <About />
         </div>
         
-        <div className="animate-on-scroll bg-gradient-dark section-transition" style={{"--next-bg-color": "rgba(10,14,23,1)"} as React.CSSProperties}>
+        <div className="animate-on-scroll bg-black section-transition" style={{"--next-bg-color": "rgba(255,255,255,1)"} as React.CSSProperties}>
           <FAQ />
         </div>
         
-        <div className="animate-on-scroll bg-leveraged-dark">
+        <div className="animate-on-scroll bg-white text-black">
           <Contact />
         </div>
         

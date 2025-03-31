@@ -34,13 +34,13 @@ const Services: React.FC = () => {
     <section id="services" className="py-10 px-6 md:px-12 lg:px-24 relative">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
-          <p className="inline-block text-sm font-semibold py-1 px-3 rounded-full bg-leveraged-blue/10 text-leveraged-blue mb-4">
+          <p className="inline-block text-sm font-semibold py-1 px-3 rounded-full bg-gray-200 text-black mb-4">
             OUR SERVICES
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 gradient-text">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-black">
             Accelerate Your Growth
           </h2>
-          <p className="text-leveraged-white/90 max-w-2xl mx-auto">
+          <p className="text-gray-700 max-w-2xl mx-auto">
             We offer complete done-for-you solutions that drive predictable revenue and scale your business.
           </p>
         </div>
@@ -55,6 +55,7 @@ const Services: React.FC = () => {
               ctaText={service.ctaText}
               ctaLink={service.ctaLink}
               delay={index * 200}
+              className="bg-gray-100 text-black border-gray-300"
             />
           ))}
         </div>
