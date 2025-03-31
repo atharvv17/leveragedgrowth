@@ -2,11 +2,13 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,6 +30,14 @@ const Navbar: React.FC = () => {
     { name: 'FAQ', href: '#faq' },
     { name: 'Contact', href: '#contact' },
   ];
+
+  // Function to handle section links - prepend with home path if not on home page
+  const getSectionLink = (href: string) => {
+    if (href.startsWith('#') && !isHomePage) {
+      return `/${href}`;
+    }
+    return href;
+  };
 
   return (
     <header 
@@ -51,7 +61,7 @@ const Navbar: React.FC = () => {
             link.href.startsWith('#') ? (
               <a 
                 key={link.name}
-                href={link.href}
+                href={getSectionLink(link.href)}
                 className="text-leveraged-white hover:text-leveraged-blue transition-colors text-sm font-medium"
               >
                 {link.name}
@@ -104,7 +114,7 @@ const Navbar: React.FC = () => {
             link.href.startsWith('#') ? (
               <a 
                 key={link.name}
-                href={link.href}
+                href={getSectionLink(link.href)}
                 className="text-leveraged-white hover:text-leveraged-blue transition-colors text-lg font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
