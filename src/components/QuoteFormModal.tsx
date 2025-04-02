@@ -31,7 +31,7 @@ const QuoteFormModal: React.FC<QuoteFormModalProps> = ({
           </Button>
         )}
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[600px] md:max-w-[800px] p-0 bg-transparent border-none">
+      <DialogContent className="sm:max-w-[600px] md:max-w-[800px] p-0 bg-transparent border-none max-h-[90vh]">
         <QuoteForm onClose={() => setOpen(false)} isModal={true} />
       </DialogContent>
     </Dialog>

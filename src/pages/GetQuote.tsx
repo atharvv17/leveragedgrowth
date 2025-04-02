@@ -20,7 +20,7 @@ const GetQuote: React.FC = () => {
           <div className="absolute bottom-20 left-10 w-80 h-80 bg-blue-500/10 blur-[100px] rounded-full z-0"></div>
           
           <div className="relative z-10">
-            <QuoteForm />
+            <QuoteForm isModal={false} />
           </div>
         </div>
       </main>

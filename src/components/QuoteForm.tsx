@@ -25,6 +25,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 // Define the form schema
 const formSchema = z.object({
@@ -137,6 +138,9 @@ const QuoteForm: React.FC<QuoteFormProps> = ({ onClose, isModal = false }) => {
     }
   };
 
+  // Determine the max height based on whether it's a modal or standalone page
+  const maxHeight = isModal ? "max-h-[70vh]" : "max-h-full";
+
   return (
     <div className="bg-leveraged-dark p-6 rounded-lg max-w-2xl mx-auto w-full relative">
       {isModal && onClose && (
@@ -154,278 +158,282 @@ const QuoteForm: React.FC<QuoteFormProps> = ({ onClose, isModal = false }) => {
         <p className="text-leveraged-white/80">Let us know about your business and sales goals</p>
       </div>
       
-      <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Full Name */}
-            <FormField
-              control={form.control}
-              name="fullName"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Full Name</FormLabel>
-                  <FormControl>
-                    <Input placeholder="Your name" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            
-            {/* Email */}
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Business Email</FormLabel>
-                  <FormControl>
-                    <Input type="email" placeholder="your@company.com" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            
-            {/* Phone */}
-            <FormField
-              control={form.control}
-              name="phone"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Phone Number</FormLabel>
-                  <FormControl>
-                    <Input placeholder="+91 98765 43210" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            
-            {/* Company Name */}
-            <FormField
-              control={form.control}
-              name="companyName"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Company Name</FormLabel>
-                  <FormControl>
-                    <Input placeholder="Your company" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            
-            {/* Industry */}
-            <FormField
-              control={form.control}
-              name="industry"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Industry</FormLabel>
-                  <FormControl>
-                    <Input placeholder="e.g. SaaS, E-commerce, etc." {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            
-            {/* Revenue */}
-            <FormField
-              control={form.control}
-              name="revenue"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Current Monthly Revenue</FormLabel>
-                  <Select onValueChange={field.onChange} defaultValue={field.value}>
-                    <FormControl>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Select revenue range" />
-                      </SelectTrigger>
-                    </FormControl>
-                    <SelectContent>
-                      {revenueOptions.map((option) => (
-                        <SelectItem key={option.value} value={option.value}>
-                          {option.label}
-                        </SelectItem>
+      <ScrollArea className={`${maxHeight} pr-4`}>
+        <div className="pr-4">
+          <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Full Name */}
+                <FormField
+                  control={form.control}
+                  name="fullName"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Full Name</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Your name" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                
+                {/* Email */}
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Business Email</FormLabel>
+                      <FormControl>
+                        <Input type="email" placeholder="your@company.com" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                
+                {/* Phone */}
+                <FormField
+                  control={form.control}
+                  name="phone"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Phone Number</FormLabel>
+                      <FormControl>
+                        <Input placeholder="+91 98765 43210" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                
+                {/* Company Name */}
+                <FormField
+                  control={form.control}
+                  name="companyName"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Company Name</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Your company" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                
+                {/* Industry */}
+                <FormField
+                  control={form.control}
+                  name="industry"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Industry</FormLabel>
+                      <FormControl>
+                        <Input placeholder="e.g. SaaS, E-commerce, etc." {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                
+                {/* Revenue */}
+                <FormField
+                  control={form.control}
+                  name="revenue"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Current Monthly Revenue</FormLabel>
+                      <Select onValueChange={field.onChange} defaultValue={field.value}>
+                        <FormControl>
+                          <SelectTrigger>
+                            <SelectValue placeholder="Select revenue range" />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          {revenueOptions.map((option) => (
+                            <SelectItem key={option.value} value={option.value}>
+                              {option.label}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+              
+              {/* Sales Challenges */}
+              <FormField
+                control={form.control}
+                name="challenges"
+                render={() => (
+                  <FormItem>
+                    <FormLabel>Biggest Sales Challenges</FormLabel>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-2">
+                      {challengeOptions.map((challenge) => (
+                        <FormField
+                          key={challenge.id}
+                          control={form.control}
+                          name="challenges"
+                          render={({ field }) => {
+                            return (
+                              <FormItem
+                                key={challenge.id}
+                                className="flex flex-row items-start space-x-3 space-y-0"
+                              >
+                                <FormControl>
+                                  <Checkbox
+                                    checked={field.value?.includes(challenge.id)}
+                                    onCheckedChange={(checked) => {
+                                      return checked
+                                        ? field.onChange([...field.value, challenge.id])
+                                        : field.onChange(
+                                            field.value?.filter(
+                                              (value) => value !== challenge.id
+                                            )
+                                          )
+                                    }}
+                                  />
+                                </FormControl>
+                                <FormLabel className="font-normal">
+                                  {challenge.label}
+                                </FormLabel>
+                              </FormItem>
+                            )
+                          }}
+                        />
                       ))}
-                    </SelectContent>
-                  </Select>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </div>
-          
-          {/* Sales Challenges */}
-          <FormField
-            control={form.control}
-            name="challenges"
-            render={() => (
-              <FormItem>
-                <FormLabel>Biggest Sales Challenges</FormLabel>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-2">
-                  {challengeOptions.map((challenge) => (
-                    <FormField
-                      key={challenge.id}
-                      control={form.control}
-                      name="challenges"
-                      render={({ field }) => {
-                        return (
-                          <FormItem
-                            key={challenge.id}
-                            className="flex flex-row items-start space-x-3 space-y-0"
-                          >
-                            <FormControl>
-                              <Checkbox
-                                checked={field.value?.includes(challenge.id)}
-                                onCheckedChange={(checked) => {
-                                  return checked
-                                    ? field.onChange([...field.value, challenge.id])
-                                    : field.onChange(
-                                        field.value?.filter(
-                                          (value) => value !== challenge.id
-                                        )
-                                      )
-                                }}
-                              />
-                            </FormControl>
-                            <FormLabel className="font-normal">
-                              {challenge.label}
-                            </FormLabel>
-                          </FormItem>
-                        )
-                      }}
-                    />
-                  ))}
-                </div>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          
-          {/* Services of Interest */}
-          <FormField
-            control={form.control}
-            name="services"
-            render={() => (
-              <FormItem>
-                <FormLabel>Services of Interest</FormLabel>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-2">
-                  {serviceOptions.map((service) => (
-                    <FormField
-                      key={service.id}
-                      control={form.control}
-                      name="services"
-                      render={({ field }) => {
-                        return (
-                          <FormItem
-                            key={service.id}
-                            className="flex flex-row items-start space-x-3 space-y-0"
-                          >
-                            <FormControl>
-                              <Checkbox
-                                checked={field.value?.includes(service.id)}
-                                onCheckedChange={(checked) => {
-                                  return checked
-                                    ? field.onChange([...field.value, service.id])
-                                    : field.onChange(
-                                        field.value?.filter(
-                                          (value) => value !== service.id
-                                        )
-                                      )
-                                }}
-                              />
-                            </FormControl>
-                            <FormLabel className="font-normal">
-                              {service.label}
-                            </FormLabel>
-                          </FormItem>
-                        )
-                      }}
-                    />
-                  ))}
-                </div>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          
-          {/* Desired Results */}
-          <FormField
-            control={form.control}
-            name="results"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Specific Results Desired</FormLabel>
-                <FormControl>
-                  <Textarea
-                    placeholder="What specific outcomes are you looking to achieve?"
-                    {...field}
-                    className="min-h-[80px]"
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          
-          {/* Contact Mode */}
-          <FormField
-            control={form.control}
-            name="contactMode"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Preferred Mode of Contact</FormLabel>
-                <Select onValueChange={field.onChange} defaultValue={field.value}>
-                  <FormControl>
-                    <SelectTrigger>
-                      <SelectValue placeholder="How should we contact you?" />
-                    </SelectTrigger>
-                  </FormControl>
-                  <SelectContent>
-                    {contactModeOptions.map((option) => (
-                      <SelectItem key={option.value} value={option.value}>
-                        {option.label}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          
-          {/* Additional Notes */}
-          <FormField
-            control={form.control}
-            name="notes"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Additional Notes (Optional)</FormLabel>
-                <FormControl>
-                  <Textarea
-                    placeholder="Any other information you'd like to share"
-                    {...field}
-                    className="min-h-[80px]"
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          
-          <Button 
-            type="submit" 
-            className="w-full bg-leveraged-blue text-black hover:bg-leveraged-blue/90 transition-all hover:shadow-[0_0_15px_rgba(23,177,232,0.5)]"
-            disabled={isSubmitting}
-          >
-            {isSubmitting ? "Submitting..." : "Submit Quote Request"}
-          </Button>
-        </form>
-      </Form>
+                    </div>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              
+              {/* Services of Interest */}
+              <FormField
+                control={form.control}
+                name="services"
+                render={() => (
+                  <FormItem>
+                    <FormLabel>Services of Interest</FormLabel>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-2">
+                      {serviceOptions.map((service) => (
+                        <FormField
+                          key={service.id}
+                          control={form.control}
+                          name="services"
+                          render={({ field }) => {
+                            return (
+                              <FormItem
+                                key={service.id}
+                                className="flex flex-row items-start space-x-3 space-y-0"
+                              >
+                                <FormControl>
+                                  <Checkbox
+                                    checked={field.value?.includes(service.id)}
+                                    onCheckedChange={(checked) => {
+                                      return checked
+                                        ? field.onChange([...field.value, service.id])
+                                        : field.onChange(
+                                            field.value?.filter(
+                                              (value) => value !== service.id
+                                            )
+                                          )
+                                    }}
+                                  />
+                                </FormControl>
+                                <FormLabel className="font-normal">
+                                  {service.label}
+                                </FormLabel>
+                              </FormItem>
+                            )
+                          }}
+                        />
+                      ))}
+                    </div>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              
+              {/* Desired Results */}
+              <FormField
+                control={form.control}
+                name="results"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Specific Results Desired</FormLabel>
+                    <FormControl>
+                      <Textarea
+                        placeholder="What specific outcomes are you looking to achieve?"
+                        {...field}
+                        className="min-h-[80px]"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              
+              {/* Contact Mode */}
+              <FormField
+                control={form.control}
+                name="contactMode"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Preferred Mode of Contact</FormLabel>
+                    <Select onValueChange={field.onChange} defaultValue={field.value}>
+                      <FormControl>
+                        <SelectTrigger>
+                          <SelectValue placeholder="How should we contact you?" />
+                        </SelectTrigger>
+                      </FormControl>
+                      <SelectContent>
+                        {contactModeOptions.map((option) => (
+                          <SelectItem key={option.value} value={option.value}>
+                            {option.label}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              
+              {/* Additional Notes */}
+              <FormField
+                control={form.control}
+                name="notes"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Additional Notes (Optional)</FormLabel>
+                    <FormControl>
+                      <Textarea
+                        placeholder="Any other information you'd like to share"
+                        {...field}
+                        className="min-h-[80px]"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              
+              <Button 
+                type="submit" 
+                className="w-full bg-leveraged-blue text-black hover:bg-leveraged-blue/90 transition-all hover:shadow-[0_0_15px_rgba(23,177,232,0.5)]"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Submitting..." : "Submit Quote Request"}
+              </Button>
+            </form>
+          </Form>
+        </div>
+      </ScrollArea>
     </div>
   );
 };
