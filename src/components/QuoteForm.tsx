@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "@/hooks/use-toast";
 import { X } from 'lucide-react';
+import { supabase } from '@/integrations/supabase/client';
 
 import { Button } from "@/components/ui/button";
 import {
@@ -83,9 +84,10 @@ const contactModeOptions = [
 interface QuoteFormProps {
   onClose?: () => void;
   isModal?: boolean;
+  onSupabaseSubmit?: (formData: any) => Promise<boolean>;
 }
 
-const QuoteForm: React.FC<QuoteFormProps> = ({ onClose, isModal = false }) => {
+const QuoteForm: React.FC<QuoteFormProps> = ({ onClose, isModal = false, onSupabaseSubmit }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Initialize form
@@ -112,19 +114,31 @@ const QuoteForm: React.FC<QuoteFormProps> = ({ onClose, isModal = false }) => {
     console.log("Form values:", values);
     
     try {
-      // In a real implementation, this would be where you'd send data to Supabase
-      // For now, we'll just simulate a delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      toast({
-        title: "Quote request submitted!",
-        description: "We'll get back to you shortly.",
-      });
-      
-      form.reset();
-      
-      if (onClose) {
-        onClose();
+      // Use onSupabaseSubmit if provided, otherwise handle internally
+      if (onSupabaseSubmit) {
+        const success = await onSupabaseSubmit(values);
+        if (success) {
+          form.reset();
+          if (onClose) onClose();
+        }
+      } else {
+        // Default submission to Supabase
+        const { error } = await supabase
+          .from('quote_requests')
+          .insert([values]);
+        
+        if (error) throw error;
+        
+        toast({
+          title: "Quote request submitted!",
+          description: "We'll get back to you shortly.",
+        });
+        
+        form.reset();
+        
+        if (onClose) {
+          onClose();
+        }
       }
     } catch (error) {
       console.error("Error submitting form:", error);
