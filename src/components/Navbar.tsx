@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Link, useLocation } from 'react-router-dom';
+import QuoteFormModal from './QuoteFormModal';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,6 +30,7 @@ const Navbar: React.FC = () => {
     { name: 'About', href: '#about' },
     { name: 'FAQ', href: '#faq' },
     { name: 'Contact', href: '#contact' },
+    { name: 'Get a Quote', href: '/get-quote' },
   ];
 
   // Function to handle section links - prepend with home path if not on home page
@@ -57,7 +59,7 @@ const Navbar: React.FC = () => {
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
-          {navLinks.map((link) => (
+          {navLinks.slice(0, -1).map((link) => (
             link.href.startsWith('#') ? (
               <a 
                 key={link.name}
@@ -78,15 +80,19 @@ const Navbar: React.FC = () => {
           ))}
         </nav>
         
-        {/* CTA Button */}
-        <a 
-          href="https://calendly.com/leveragegrowthbiz/30min" 
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden md:inline-flex items-center px-5 py-2.5 rounded-lg bg-leveraged-blue text-black font-medium text-sm hover:bg-leveraged-blue/90 transition-all hover:shadow-[0_0_15px_rgba(23,177,232,0.5)] animate-pulse-glow"
-        >
-          Get a Free Consultation
-        </a>
+        {/* Call to Action Buttons */}
+        <div className="hidden md:flex space-x-4">
+          <QuoteFormModal />
+          
+          <a 
+            href="https://calendly.com/leveragegrowthbiz/30min" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-5 py-2.5 rounded-lg bg-leveraged-blue text-black font-medium text-sm hover:bg-leveraged-blue/90 transition-all hover:shadow-[0_0_15px_rgba(23,177,232,0.5)] animate-pulse-glow"
+          >
+            Get a Free Consultation
+          </a>
+        </div>
         
         {/* Mobile Menu Button */}
         <button 
@@ -131,6 +137,21 @@ const Navbar: React.FC = () => {
               </Link>
             )
           ))}
+          
+          {/* Mobile Quote Button */}
+          <div className="pt-4">
+            <QuoteFormModal 
+              trigger={
+                <button 
+                  className="w-full inline-flex items-center justify-center px-5 py-3 rounded-lg bg-leveraged-blue text-black font-medium hover:bg-leveraged-blue/90 transition-all animate-pulse-glow"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Get a Quote
+                </button>
+              }
+            />
+          </div>
+          
           <a 
             href="https://calendly.com/leveragegrowthbiz/30min"
             target="_blank"
