@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 import { Share2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { toast } from '@/hooks/use-toast';
-import { supabase } from '@/integrations/supabase/client';
 
 const GetQuote: React.FC = () => {
   const shareableUrl = `${window.location.origin}/quote`;
@@ -18,33 +17,6 @@ const GetQuote: React.FC = () => {
       title: "Link copied!",
       description: "Shareable quote link has been copied to clipboard.",
     });
-  };
-
-  // Function to handle form submission to Supabase
-  const handleFormSubmit = async (formData: any) => {
-    try {
-      const { error } = await supabase
-        .from('quote_requests')
-        .insert([formData]);
-      
-      if (error) throw error;
-      
-      toast({
-        title: "Quote request submitted!",
-        description: "We'll get back to you shortly.",
-      });
-      
-      return true;
-    } catch (error) {
-      console.error("Error submitting to Supabase:", error);
-      toast({
-        title: "Submission failed",
-        description: "Please try again later.",
-        variant: "destructive",
-      });
-      
-      return false;
-    }
   };
 
   return (
@@ -74,7 +46,7 @@ const GetQuote: React.FC = () => {
               </Button>
             </div>
             
-            <QuoteForm isModal={false} onSupabaseSubmit={handleFormSubmit} />
+            <QuoteForm isModal={false} />
           </div>
         </div>
       </main>

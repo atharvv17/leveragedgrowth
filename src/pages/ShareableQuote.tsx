@@ -2,38 +2,8 @@
 import React from 'react';
 import QuoteForm from '@/components/QuoteForm';
 import { Link } from 'react-router-dom';
-import { ChevronLeft } from 'lucide-react';
-import { supabase } from '@/integrations/supabase/client';
-import { toast } from '@/hooks/use-toast';
 
 const ShareableQuote: React.FC = () => {
-  // Function to handle form submission to Supabase
-  const handleFormSubmit = async (formData: any) => {
-    try {
-      const { error } = await supabase
-        .from('quote_requests')
-        .insert([formData]);
-      
-      if (error) throw error;
-      
-      toast({
-        title: "Quote request submitted!",
-        description: "We'll get back to you shortly.",
-      });
-      
-      return true;
-    } catch (error) {
-      console.error("Error submitting to Supabase:", error);
-      toast({
-        title: "Submission failed",
-        description: "Please try again later.",
-        variant: "destructive",
-      });
-      
-      return false;
-    }
-  };
-
   return (
     <div className="min-h-screen bg-leveraged-dark flex flex-col">
       {/* Simple header */}
@@ -59,7 +29,7 @@ const ShareableQuote: React.FC = () => {
           <div className="absolute bottom-20 left-10 w-80 h-80 bg-blue-500/10 blur-[100px] rounded-full z-0"></div>
           
           <div className="relative z-10">
-            <QuoteForm isModal={false} onSupabaseSubmit={handleFormSubmit} />
+            <QuoteForm isModal={false} />
           </div>
         </div>
       </main>
