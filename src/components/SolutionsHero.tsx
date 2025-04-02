@@ -42,7 +42,7 @@ const SolutionsHero: React.FC = () => {
           <div className="w-full lg:w-1/2 flex justify-center items-center floating">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-leveraged-blue/20 to-blue-500/20 blur-xl rounded-full transform scale-90 opacity-70"></div>
-              <img alt="Sales Pipeline Visualization" className="relative z-10 rounded-xl max-w-full border border-leveraged-blue/30 shadow-[0_0_30px_rgba(23,177,232,0.3)]" src="/lovable-uploads/8382422d-fb8c-4dfa-ace6-d9eeca7c8940.jpg" />
+              
             </div>
           </div>
         </div>
